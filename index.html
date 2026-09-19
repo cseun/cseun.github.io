@@ -184,7 +184,7 @@
         <div>
           <p class="when">2025.05 – 2026.01</p>
           <h3>엑서테크 <span class="tag-non">프리랜서</span></h3>
-          <p class="role">BMS 검사장비 S/W · C# · 9개월</p>
+          <p class="role">검사장비 S/W 유지보수 · 현장 대응 · 9개월</p>
         </div>
         <div class="detail">
           <p><b>BMS 검사장비 테스트 보조와 C# S/W 유지보수</b></p>
@@ -195,13 +195,24 @@
       <div class="job b">
         <div>
           <p class="when">2023.09 – 2025.04</p>
-          <h3>에어텔닷컴 그룹</h3>
+          <h3>에어텔닷컴 그룹 <span class="tag-dev">개발</span></h3>
           <p class="role">웹 백엔드 · PHP / Laravel · 1년 8개월</p>
         </div>
         <div class="detail">
           <p><b>PHP / Laravel 기반 상품 · 주문 · 정산 데이터 처리</b></p>
           <p>커머스 채널 상품 연동과 내부 ERP 유지보수</p>
-          <p class="sub">재직 중 소속 변경, 동일 개발 조직에서 업무 지속</p>
+          <p class="sub">재직 중 소속 변경 (마케팅하이랜즈 → 에어텔닷컴), 동일 개발 조직에서 업무 지속</p>
+        </div>
+      </div>
+      <div class="job d">
+        <div>
+          <p class="when">2020 – 2025</p>
+          <h3>신구대학교 <span class="tag-edu">학업</span></h3>
+          <p class="role">IT소프트웨어학과 · 졸업</p>
+        </div>
+        <div class="detail">
+          <p><b>소프트웨어로 전공을 바꿔 진학</b></p>
+          <p>2023년 개발자로 취업, 재직하며 2025년 졸업</p>
         </div>
       </div>
       <div class="job c">
@@ -209,6 +220,7 @@
           <p class="when">2017.12 – 2019.06</p>
           <h3>마케팅하이랜즈 <span class="tag-non">비개발</span></h3>
           <p class="role">여행 OP · 호텔 B2B 세일즈 · 1년 7개월</p>
+          <p class="role" style="color:var(--text-dim)">현 에어텔닷컴 그룹</p>
         </div>
         <div class="detail">
           <p><b>베트남 다낭 현지 호텔 B2B 세일즈와 여행 운영</b></p>
@@ -216,7 +228,7 @@
         </div>
       </div>
     </div>
-    <div class="note">개발 경력은 <b>웹 백엔드 1년 8개월</b>이고, 여기에 BMS 검사장비 S/W 유지보수와 미국 제조 현장 대응 경험이 더해져 있습니다. 2017년 운영직으로 근무한 회사에 2023년 개발자로 다시 합류해, 예약 · 정산 업무를 직접 해본 도메인 위에서 그 시스템을 만들었습니다.</div>
+    <div class="note">개발 경력은 <b>웹 백엔드 1년 8개월</b>이고, 여기에 BMS 검사장비 S/W 유지보수와 미국 제조 현장 대응 경험이 더해져 있습니다. 여행 운영으로 일하다 2020년 소프트웨어로 전공을 바꿔 진학했고, <b>2017년 운영직으로 근무한 회사에 2023년 개발자로 다시 합류</b>해 예약 · 정산 업무를 직접 해본 도메인 위에서 그 시스템을 만들었습니다. 학업은 재직 중이던 2025년에 마쳤습니다.</div>
   </div>
 </section>
 
@@ -227,10 +239,10 @@
       <div class="proj-eyebrow">
         <span class="num">01 · LOGISTICS FMS</span>
         <span class="chip amber">진행 중</span>
-        <span class="chip gray">팀 7명 · ACS 관제 담당 2인</span>
+        <span class="chip gray">팀 7명 · FMS 담당 3인</span>
       </div>
       <h2>다중 로봇의 이동 명령과 상태를 연결하는 관제</h2>
-      <p class="sub">TurtleBot 기반 물류 시스템에서 관제(FMS) 쪽을 맡아, 목적지 선택 · 정지 · 수동 주행을 관제 화면의 조작 흐름으로 구성했습니다.</p>
+      <p class="sub">TurtleBot 기반 물류 시스템에서 FMS 쪽을 맡아, 목적지 선택 · 정지 · 수동 주행을 관제 화면의 조작 흐름으로 구성했습니다.</p>
 
       <div class="proj-body">
         <div class="col">
@@ -335,7 +347,6 @@
           <div class="card kv">
             <p class="label">하드웨어</p>
             <p>NUCLEO-F103RB · 내부 CAN 500kbps · SPI 공유 버스</p>
-            <p style="font-size:13px;color:var(--text-dim);line-height:1.45">발표 버전은 내부 CAN이 없는 F411RE라 MCP2515 외장 컨트롤러를 SPI에 붙여 썼고, 이후 내부 CAN을 가진 F103으로 옮기며 외장 칩을 제거했습니다.</p>
           </div>
         </div>
         <div class="col">
@@ -536,15 +547,15 @@
     <div class="method">
       <div class="card">
         <h3>문제 확인</h3>
-        <p>코드, 전원, 배선의 원인을 나눠 확인하고, 브레이크포인트와 watch로 상태를 관측합니다.</p>
+        <p>하드웨어와 소프트웨어를 나눠서 접근합니다. 전원과 배선을 먼저 확인하고, 코드는 브레이크포인트와 watch로 상태를 관측합니다.</p>
       </div>
       <div class="card">
-        <h3>현장 대응</h3>
-        <p>장치가 동작하지 않을 때 코드부터 의심하지 않습니다. 공급 전원이 부족했던 경우에는 배터리 직결과 변환기로 공급 구조를 다시 잡아 해결했습니다.</p>
+        <h3>확인 순서</h3>
+        <p>같은 증상의 사례가 있는지 팀과 자료에서 먼저 확인하고, 버전이 맞는지 점검한 뒤 수정에 들어갑니다.</p>
       </div>
       <div class="card">
         <h3>협업</h3>
-        <p>Git 브랜치 · 병합 · PR을 활용하고, Jira와 Confluence에 작업과 결정을 기록합니다.</p>
+        <p>Git 브랜치 · 병합 · PR을 활용하고, 다음 작업자가 이어받을 수 있도록 Jira와 Confluence에 작업과 결정을 기록합니다.</p>
       </div>
     </div>
 
