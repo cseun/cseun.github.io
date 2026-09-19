@@ -362,6 +362,7 @@
             <p class="label">개인 담당</p>
             <p class="big">UI/UX와 앱 화면 흐름</p>
             <p>프론트엔드 구현 · 통합, 간단한 3D 모델링</p>
+            <p>시연용 바퀴 · 모터를 릴레이로 연결해 기본 구동 데모 구현</p>
           </div>
           <div class="card kv">
             <p class="label">사용자 흐름</p>
@@ -373,7 +374,7 @@
               <div class="node ok"><b>운행 상태 확인</b>반납</div>
             </div>
           </div>
-          <div class="theirs">서버 · AI 모델 · 주 장치 펌웨어는 팀원 담당</div>
+          <div class="theirs">서버 · AI 모델 · 주 장치 펌웨어와 기존 킥보드 하드웨어 통합은 팀원 담당</div>
         </div>
         <div class="col">
           <figure>
@@ -383,9 +384,9 @@
         </div>
       </div>
 
+      <h3 style="font-size:17px;margin-top:26px">인증 · 안전 점검 화면과 서버 상태 연동</h3>
       <div class="proj-body">
         <div class="col">
-          <h3 style="font-size:17px">인증 · 안전 점검 화면과 서버 상태 연동</h3>
           <div class="card kv">
             <p class="label">화면 구현</p>
             <p>회원가입 · 로그인, 면허증 촬영과 OCR 확인</p>
@@ -396,20 +397,23 @@
             <p>HTTP로 요청 · 결과 처리</p>
             <p>SSE로 운행 상태를 수신해 화면에 반영</p>
           </div>
+        </div>
+        <div class="col">
           <div class="card kv">
             <p class="label">작업 방식</p>
             <p>Figma AI와 LLM으로 화면 · 코드를 구성한 뒤 검토하고 통합했습니다.</p>
           </div>
           <div class="caution">개발용 mock과 실제 장치 연동 검증을 구분합니다.</div>
         </div>
-        <div class="col">
-          <figure>
-            <img src="assets/safekick-app.jpg" alt="SafeKick 앱 본인 인증 화면" loading="lazy" width="351" height="760" style="max-width:340px;margin:0 auto">
-            <figcaption>본인 인증 화면</figcaption>
-          </figure>
-        </div>
       </div>
-      <a class="repo" href="https://github.com/safe-kick/safe-kick-app">github.com/safe-kick/safe-kick-app</a>
+      <figure style="margin-top:18px">
+        <img src="assets/safekick-app.jpg" alt="SafeKick 앱 화면 — 면허증 확인, 홈, QR 스캔, 본인 인증" loading="lazy" width="1880" height="972">
+        <figcaption>Figma로 구성한 앱 화면 흐름</figcaption>
+      </figure>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <a class="repo" href="https://github.com/safe-kick/safe-kick-app">github.com/safe-kick/safe-kick-app</a>
+        <a class="repo" href="https://www.figma.com/make/Bp7wW7srjsIBAeTyVK3pve/Electric-Scooter-Safety-App-Wireframe">Figma 화면 설계</a>
+      </div>
     </article>
 
     <article class="proj" id="umjoo">
@@ -489,25 +493,24 @@
         <span class="num">05 · PLC MPS</span>
         <span class="chip gray">팀 프로젝트</span>
       </div>
-      <h2>수동 장비 제어와 HMI 화면 구성</h2>
-      <p class="sub">MELSEC Q와 MPS 장비에서 수동 동작과 개별 장비 제어 화면을 맡았습니다.</p>
+      <h2>수동 · 자동 장비 제어와 HMI 화면 구성</h2>
+      <p class="sub">MELSEC Q와 MPS 장비에서 수동 동작과 자동 시퀀스, 개별 장비 제어 화면을 맡았습니다.</p>
 
       <div class="proj-body">
         <div class="col">
           <div class="mine">
             <p class="label">개인 담당</p>
-            <p class="big">수동 동작 · 장비 제어 · HMI</p>
-            <p>수동 적재 · 배출 화면, 실린더 · 서보 점검 화면</p>
+            <p class="big">수동 · 자동 동작 · 장비 제어 · HMI</p>
+            <p>수동 적재 · 배출 화면, 실린더 · 서보 점검 화면, 자동 시퀀스</p>
           </div>
           <div class="card kv">
-            <p class="label">화면 구성 방식</p>
+            <p class="label">문제 해결</p>
             <p>터치 버튼과 상태 램프를 겹쳐 <b>조작 위치에서 결과를 확인</b>하도록 구성했습니다.</p>
           </div>
           <div class="card kv">
             <p class="label">사용 도구</p>
             <p>GX Works2 · GT Designer3</p>
           </div>
-          <div class="theirs">자동 시퀀스는 팀원 담당</div>
         </div>
         <div class="col figs">
           <figure>

@@ -341,9 +341,21 @@ section.block { padding: 44px 0 4px; }
 .job .detail p { font-size: 14.5px; line-height: 1.5; }
 .job .detail .sub { font-size: 13px; color: var(--text-dim); }
 
-.tag-dev, .tag-non { display: inline-block; margin-right: 6px; font-weight: 700; font-size: 12.5px; }
-.tag-dev { color: var(--primary-ink); }
-.tag-non { color: var(--text-dim); }
+.tag-dev { display: inline-block; margin-right: 6px; font-weight: 700; font-size: 12.5px; color: var(--primary-ink); }
+
+.tag-non {
+  display: inline-block;
+  margin-right: 7px;
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  color: var(--text-dim);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.7;
+  vertical-align: 1px;
+}
 
 .note {
   margin-top: 12px;
