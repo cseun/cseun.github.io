@@ -313,6 +313,7 @@
             <p class="label">개인 담당 · Node 2</p>
             <p class="big">차량 상태를 TFT와 CLCD에 표시</p>
             <p>방향지시등, 조명, 부저 출력 제어</p>
+            <p>핀맵 설계와 하드웨어 배선 직접 수행</p>
           </div>
           <div class="card">
             <p class="label" style="margin-bottom:8px">팀 내 역할 분담</p>
@@ -345,10 +346,14 @@
             <p>NUCLEO-F103RB · 내부 CAN 500kbps · SPI 공유 버스</p>
           </div>
         </div>
-        <div class="col">
+        <div class="col figs">
           <figure>
             <img src="assets/kickcan-wiring.jpg" alt="Node 2 하드웨어 연결 — CAN 트랜시버, SPI 공유 버스, TFT 2대, CLCD, LED, 부저" loading="lazy" width="1341" height="966">
             <figcaption>Node 2 하드웨어 연결 구성</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/kickcan-pinmap.jpg" alt="Node 2 핀맵 — SPI · CAN · I2C · GPIO · 타이머 채널별 사용 핀과 연결 대상" loading="lazy" width="1524" height="800">
+            <figcaption>직접 작성한 핀맵 — 기능별 사용 핀과 연결 대상 정리</figcaption>
           </figure>
         </div>
       </div>
