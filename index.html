@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="presentation.js" defer></script>
 </head>
 <body>
 
@@ -16,8 +17,8 @@
   <div class="wrap">
     <div class="brand">최세은 <small>로봇 시스템 개발자</small></div>
     <nav class="navlinks">
-      <a href="#education">학력</a>
       <a href="#career">경력</a>
+      <a href="#education">학력</a>
       <a href="#fms">FMS</a>
       <a href="#kickcan">Kick CAN</a>
       <a href="#safekick">SafeKick</a>
@@ -30,9 +31,9 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="hero-grid">
-      <img class="hero-photo" src="assets/profile.jpg" alt="최세은 프로필 사진" width="640" height="853">
-      <div>
+    <div class="hero-card">
+      <img class="hero-profile-photo" src="assets/profile.jpg" alt="최세은 프로필 사진" width="640" height="853">
+      <div class="hero-content">
         <p class="eyebrow">ROBOTICS SOFTWARE PORTFOLIO</p>
         <h1>최세은 <span>로봇 시스템 개발자</span></h1>
         <p class="lede">웹 백엔드와 현장 장비 경험을 바탕으로<br>로봇 제어와 관제 소프트웨어를 개발합니다.</p>
@@ -40,116 +41,15 @@
           <span class="chip blue">웹 백엔드 1년 8개월</span>
           <span class="chip green">장비 S/W 및 현장 대응 경험</span>
         </div>
-        <div class="factlist">
-          <span class="fact"><span class="k">학력</span> 신구대학교 IT소프트웨어학과(3년제) 졸업 · 4.18 / 4.5</span>
-          <span class="fact"><span class="k">과정</span> AI융합 로봇 SW개발자 3기 과정 수료</span>
-        </div>
-        <div class="factlist">
-          <a class="fact" href="mailto:cseeun98@gmail.com"><span class="k">MAIL</span> <span class="mono">cseeun98@gmail.com</span></a>
-          <a class="fact" href="https://github.com/cseun"><span class="k">GITHUB</span> <span class="mono">github.com/cseun</span></a>
-          <a class="fact" href="https://slowbreeze.tistory.com"><span class="k">BLOG</span> <span class="mono">slowbreeze.tistory.com</span></a>
+        <div class="hero-links" aria-label="연락처와 프로필 링크">
+          <a href="mailto:cseeun98@gmail.com"><span>이메일</span><strong>cseeun98@gmail.com</strong></a>
+          <a href="https://github.com/cseun"><span>GitHub</span><strong>github.com/cseun</strong></a>
+          <a href="https://slowbreeze.tistory.com"><span>블로그</span><strong>slowbreeze.tistory.com</strong></a>
         </div>
       </div>
     </div>
   </div>
 </header>
-
-<section class="block" id="education">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>학력 · 교육</h2>
-      <p>전공 성적과 로봇 소프트웨어 교육</p>
-    </div>
-    <div class="education-grid">
-      <div class="education-card">
-        <div class="institution">
-          <img class="institution-logo" src="assets/singgu-logo.jpg" alt="신구대학교 로고" width="1265" height="290">
-          <div>
-            <p class="label">2025 졸업</p>
-            <h3>신구대학교</h3>
-            <p>IT소프트웨어학과 · 3년제</p>
-          </div>
-        </div>
-        <div class="academic-score">
-          <span>학부 성적</span>
-          <strong>4.18 <small>/ 4.5</small></strong>
-        </div>
-      </div>
-      <div class="education-card">
-        <div>
-          <p class="label">대한상공회의소 서울기술교육센터</p>
-          <h3>AI융합 로봇 SW개발자 3기 과정 수료</h3>
-        </div>
-        <p class="education-topics">ROS 2 · Edge AI · 임베디드 펌웨어 · PLC</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>기술 스택</h2>
-      <p>업무 · 프로젝트에서 실제로 사용한 범위</p>
-    </div>
-    <div class="stack">
-      <div class="stack-row">
-        <h3>장비 · 제어</h3>
-        <div class="badges">
-          <span class="badge b-c">C / C++</span>
-          <span class="badge b-php exp">C# (WinForms)</span>
-          <span class="badge b-stm">STM32</span>
-          <span class="badge b-proto">CAN · UART · SPI · I2C · PWM</span>
-          <span class="badge b-tool">MELSEC Q · GX Works2 · GT Designer3</span>
-        </div>
-      </div>
-      <div class="stack-row">
-        <h3>로봇 · 관제</h3>
-        <div class="badges">
-          <span class="badge b-ros">ROS 2</span>
-          <span class="badge b-ros">Nav2</span>
-          <span class="badge b-ros">Zenoh</span>
-          <span class="badge b-tool">Linux</span>
-        </div>
-      </div>
-      <div class="stack-row">
-        <h3>서버 · 데이터</h3>
-        <div class="badges">
-          <span class="badge b-php exp">PHP</span>
-          <span class="badge b-lar exp">Laravel</span>
-          <span class="badge b-api exp">REST API</span>
-          <span class="badge b-sql exp">MySQL</span>
-          <span class="badge b-api">FastAPI</span>
-          <span class="badge b-pg">PostgreSQL</span>
-          <span class="badge b-docker">Docker</span>
-        </div>
-      </div>
-      <div class="stack-row">
-        <h3>화면</h3>
-        <div class="badges">
-          <span class="badge b-js exp">JavaScript</span>
-          <span class="badge b-js exp">HTML</span>
-          <span class="badge b-react">React</span>
-          <span class="badge b-react">React Native (Expo)</span>
-        </div>
-      </div>
-      <div class="stack-row">
-        <h3>협업 · 도구</h3>
-        <div class="badges">
-          <span class="badge b-git exp">Git</span>
-          <span class="badge b-jira exp">Jira</span>
-          <span class="badge b-jira exp">Confluence</span>
-          <span class="badge b-git">Figma</span>
-          <span class="badge b-tool">Fusion 360</span>
-        </div>
-      </div>
-      <div class="stack-row">
-        <h3></h3>
-        <p class="stack-note">표시가 있는 항목은 실무에서 사용한 기술입니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="block" id="career">
   <div class="wrap">
@@ -195,7 +95,105 @@
         </div>
       </div>
     </div>
-    <div class="note">개발 경력은 <b>웹 백엔드 1년 8개월</b>입니다. 2017년 운영직으로 근무했던 회사에 <b>소프트웨어로 전공을 바꿔 2023년 개발자로 다시 합류</b>했습니다.</div>
+    <div class="note">개발 경력은 <b>웹 백엔드 1년 8개월</b>입니다.<br class="desktop-sentence-break"> 2017년 운영직으로 근무했던 회사에 <b>소프트웨어로 전공을 바꿔 2023년 개발자로 다시 합류</b>했습니다.</div>
+  </div>
+</section>
+
+<section class="block" id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>학력 및 전문 교육</h2>
+      <p>전공과 로봇 소프트웨어 교육</p>
+    </div>
+    <div class="education-grid">
+      <div class="education-card">
+        <div class="education-entry">
+          <div class="institution">
+            <img class="institution-logo" src="assets/singgu-symbol.png" alt="신구대학교 로고" width="946" height="946">
+            <div>
+              <h3>신구대학교 · IT소프트웨어학과</h3>
+              <p>3년제 · 2025년 졸업</p>
+              <p class="education-gpa">졸업 학점 <strong>4.18 / 4.5</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="education-entry">
+          <div class="institution">
+            <img class="institution-logo kcci-logo" src="assets/kcci-symbol.png" alt="대한상공회의소 로고" width="200" height="200">
+            <div>
+              <p class="label">대한상공회의소 서울기술교육센터</p>
+              <h3>AI융합 로봇 SW개발자 3기 과정 <span class="education-status">진행 중</span></h3>
+              <p class="education-topics">FMS 관제 · LLM 경로 판단 · STM32/CAN · PLC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>기술 스택</h2>
+      <p>업무 · 프로젝트에서 실제로 사용한 범위</p>
+    </div>
+    <div class="stack">
+      <div class="stack-row">
+        <h3>장비 · 제어</h3>
+        <div class="badges">
+          <span class="badge b-c">C / C++</span>
+          <span class="badge b-php exp">C# (WinForms)</span>
+          <span class="badge b-stm">STM32</span>
+          <span class="badge b-proto">CAN · UART · SPI · I2C · PWM</span>
+          <span class="badge b-tool">MELSEC Q · GX Works2 · GT Designer3</span>
+        </div>
+      </div>
+      <div class="stack-row">
+        <h3>로봇 · 관제</h3>
+        <div class="badges">
+          <span class="badge b-ros">ROS 2</span>
+          <span class="badge b-ros">Nav2</span>
+          <span class="badge b-ros">MQTT</span>
+          <span class="badge b-tool">Linux</span>
+        </div>
+      </div>
+      <div class="stack-row">
+        <h3>서버 · 데이터</h3>
+        <div class="badges">
+          <span class="badge b-php exp">PHP</span>
+          <span class="badge b-lar exp">Laravel</span>
+          <span class="badge b-api exp">REST API</span>
+          <span class="badge b-sql exp">MySQL</span>
+          <span class="badge b-api">FastAPI</span>
+          <span class="badge b-pg">PostgreSQL</span>
+          <span class="badge b-docker">Docker</span>
+        </div>
+      </div>
+      <div class="stack-row">
+        <h3>화면</h3>
+        <div class="badges">
+          <span class="badge b-js exp">JavaScript</span>
+          <span class="badge b-js exp">HTML</span>
+          <span class="badge b-react">React</span>
+          <span class="badge b-react">React Native (Expo)</span>
+        </div>
+      </div>
+      <div class="stack-row">
+        <h3>협업 · 도구</h3>
+        <div class="badges">
+          <span class="badge b-git exp">Git</span>
+          <span class="badge b-jira exp">Jira</span>
+          <span class="badge b-jira exp">Confluence</span>
+          <span class="badge b-git">Figma</span>
+          <span class="badge b-tool">Fusion 360</span>
+        </div>
+      </div>
+      <div class="stack-row">
+        <h3></h3>
+        <p class="stack-note">표시가 있는 항목은 실무에서 사용한 기술입니다.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -209,9 +207,9 @@
       <a class="projcard" href="#fms">
         <img src="assets/fms-dashboard.png" alt="E1I6 FMS 시뮬레이션 관제 화면" loading="lazy" width="1482" height="646">
         <div class="body">
-          <p class="no">01 · 진행 중</p>
-          <h3>E1I6 Logistics FMS</h3>
-          <p>LLM 경로 생성 · 다중 로봇 관제 · ROS 2</p>
+          <p class="no">01 · 팀 E1I6 · 진행 중</p>
+          <h3>AX MULTI-ROBOT LOGISTICS</h3>
+          <p>담당 파트 FMS AI · UI 설계 · React 구현 · LLM 경로 판단</p>
         </div>
       </a>
       <a class="projcard" href="#kickcan">
@@ -257,91 +255,150 @@
 
     <article class="proj" id="fms">
       <div class="proj-eyebrow">
-        <span class="num">01 · LOGISTICS FMS</span>
+        <span class="num">01 · 팀 E1I6</span>
         <span class="chip amber">진행 중</span>
-        <span class="chip gray">팀 7명 · FMS 담당 3인</span>
+        <span class="chip blue">담당 파트 · FMS AI</span>
+        <span class="chip gray">팀 7명</span>
       </div>
-      <h2>LLM 경로 생성과 다중 로봇 관제</h2>
-      <p class="sub">TurtleBot 기반 물류 시스템에서 관제 화면과 경로 판단을 개발합니다. LLM이 다음 노드를 하나씩 제안하면 코드가 연결 여부를 검증하고, A* 최단 경로와 비교해 주행 경로를 평가합니다.</p>
+      <h2>AX MULTI-ROBOT LOGISTICS</h2>
+      <p class="sub">LLM 경로 생성과 다중 로봇 관제를 다루는 TurtleBot 기반 물류 시스템입니다.<br class="desktop-sentence-break"> FMS UI와 React 프론트엔드를 만들고, AI 모델을 비교해 최단 경로를 생성하고 주행에 반영하는 기능을 구현했습니다.<br class="desktop-sentence-break"> 로봇 연동과 A* 알고리즘·예외 처리는 팀원이 담당합니다.</p>
 
       <div class="proj-body">
         <div class="col">
           <div class="mine">
-            <p class="label">담당 업무</p>
-            <p class="big">FMS 관제 화면 · LLM 경로 판단 실험</p>
-          </div>
-          <div class="card kv">
-            <p class="label">시스템 구성</p>
-            <p>ROS 2 Jazzy / Nav2 로봇 → <b>Zenoh</b> 상태 전달</p>
-            <p>FastAPI / PostgreSQL → React / Vite 관제 화면</p>
-          </div>
-          <div class="card kv">
-            <p class="label">구현한 기능</p>
+            <p class="label">개인 담당 01 · 디자인 및 프론트엔드</p>
+            <p class="big">FMS UI 설계 · React 구현</p>
+            <p>Figma와 Claude AI를 활용해 관제 UI 설계</p>
+            <p>ChatGPT와 Figma를 활용해 React 프론트엔드 구현</p>
             <div class="pills">
-              <span class="pill">GeoJSON 노드 조회</span>
-              <span class="pill">노드 · 좌표 Nav2 Goal</span>
-              <span class="pill red">Robot Stop</span>
-              <span class="pill">cmd_vel 수동 주행</span>
-              <span class="pill">대시보드 WebSocket</span>
-              <span class="pill green">모의 로봇 시뮬레이터 검증</span>
+              <span class="pill">지도 · 로봇 상태 표시</span>
+              <span class="pill">목적지 선택</span>
+              <span class="pill">LLM 경로 미리보기</span>
+              <span class="pill">정지 · 수동 주행 조작 UI</span>
+              <span class="pill">시뮬레이션 대시보드</span>
             </div>
+          </div>
+          <div class="mine ai">
+            <div class="mine-heading">
+              <p class="label">개인 담당 02 · AI·LLM</p>
+              <span class="chip amber">진행 중</span>
+            </div>
+            <p class="big">AI 모델 선정 · 최단 경로 생성 및 주행</p>
+            <p>AI 모델 테스트·비교 후 최단 경로를 생성해 주행하도록 구현했습니다.<br class="desktop-sentence-break"> 이후 최적 경로를 반영할 수 있도록 확장할 예정입니다.</p>
+            <div class="pills">
+              <span class="pill">AI 모델 선정·비교</span>
+              <span class="pill">Iterative 경로 선택</span>
+              <span class="pill">84쌍 경로 테스트</span>
+              <span class="pill">최단 경로 생성·주행</span>
+              <span class="pill">최적 경로 반영 예정</span>
+            </div>
+          </div>
+          <div class="card kv">
+            <p class="label">팀원 담당</p>
+            <p>ROS 2 / MQTT 기반 로봇 연동</p>
+            <p>A* 경로 탐색 알고리즘 구현과 예외 처리</p>
           </div>
         </div>
         <div class="col">
           <figure>
-            <img src="assets/fms-dashboard.png" alt="E1I6 FMS 시뮬레이션 — 로봇 위치, 노드 이동, LLM 경로 선택 화면" loading="lazy" width="1482" height="646">
-            <figcaption>E1I6 FMS 시뮬레이션 관제 화면</figcaption>
+            <a href="https://www.figma.com/make/z7YojOyW17K9Ld52J3RrW2/E1I6---AX-Multi-Robot-Logistics-FMS-Dashboard-Wireframe" target="_blank" rel="noopener noreferrer"><img src="assets/fms-dashboard.png" alt="E1I6 FMS 시뮬레이션 — 로봇 위치, 노드 이동, LLM 경로 선택 화면" loading="lazy" width="1482" height="646"></a>
+            <figcaption><a href="https://www.figma.com/make/z7YojOyW17K9Ld52J3RrW2/E1I6---AX-Multi-Robot-Logistics-FMS-Dashboard-Wireframe" target="_blank" rel="noopener noreferrer">Figma 관제 화면 설계 보기</a> · UI 설계: Figma·Claude AI / React 구현: ChatGPT·Figma 활용</figcaption>
           </figure>
         </div>
       </div>
 
-      <div class="proj-body">
-        <div class="col">
-          <h3 style="font-size:17px">지도 중심 관제 화면의 설계 기준</h3>
-          <div class="card kv">
-            <p class="label">판단에 필요한 정보부터 배치</p>
-            <p>지도에 가장 넓은 영역을 배정하고, 로봇 선택 시 상세 패널을 표시합니다.</p>
-          </div>
-          <div class="card kv">
-            <p class="label">색상과 정보 밀도에 공통 규칙 적용</p>
-            <p>정상 · 주의 · 오류 · 선택 상태를 구분하고, 지표와 레이어 조작은 한 줄로 정리했습니다.</p>
-          </div>
-          <div class="stage">
-            <div class="row now"><span class="s">1단계 완료</span><span>LLM 경로 판단 방식과 후보 모델 비교</span></div>
-            <div class="row wip"><span class="s">진행 중</span><span>예약기에서 노드·엣지 통과 시간 조정, 점유 시 정지와 재호출 연동</span></div>
-            <div class="row plan"><span class="s">다음 단계</span><span>다른 로봇의 미래 점유, 교착 처리, Laya 파인튜닝 검토</span></div>
-          </div>
-          <div class="caution">지도 마커는 현재 <b>데모 좌표</b>를 사용합니다.</div>
+      <section class="demo-video-card" aria-labelledby="fms-demo-title">
+        <div class="demo-video-heading">
+          <h3 id="fms-demo-title">핵심 기능 시연 · 전체 시나리오</h3>
+          <a href="https://youtu.be/HqL8_q4xefw" target="_blank" rel="noopener noreferrer">YouTube에서 보기</a>
         </div>
-        <div class="col">
-          <figure>
-            <img src="assets/fms-styleguide.jpg" alt="FMS UI 스타일 가이드 — 디자인 원칙과 컬러 시스템" loading="lazy" width="1400" height="962">
-            <figcaption>UI 스타일 가이드 — 개인 작성, AI 도구 활용</figcaption>
-          </figure>
+        <div class="demo-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/HqL8_q4xefw" title="E1I6 FMS 핵심 기능 시연 · 전체 시나리오" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <div class="presentation-card fms-presentation-card" data-presentation-carousel>
+        <div class="fms-presentation-layout">
+          <div class="fms-presentation-summary">
+            <span class="fms-presentation-label">개인 담당 · FMS AI</span>
+            <h3>LLM 경로 판단</h3>
+            <p class="fms-presentation-lead">AI 모델 비교와 경로 판단 방식 선정</p>
+            <ul class="fms-presentation-points">
+              <li><strong>비교 기준</strong>다익스트라와 A*를 비교하고 A*를 평가 기준으로 선정</li>
+              <li><strong>정확도 개선</strong>인접 노드를 하나씩 고르는 Iterative 방식과 코드 검증 적용</li>
+              <li><strong>구현 결과</strong>AI 모델로 최단 경로를 생성해 시뮬레이션 주행에 반영</li>
+            </ul>
+            <p class="fms-presentation-scope"><strong>시험 범위</strong>출발 13개 노드 × 도킹 목적지 7개 노드 − 동일 노드 7쌍 = 84쌍</p>
+          </div>
+          <div class="fms-presentation-media">
+            <div class="presentation-header">
+              <div>
+                <h3>LLM 경로 판단 발표자료</h3>
+                <p>팀 발표자료 · 11장</p>
+              </div>
+              <div class="presentation-controls">
+                <button type="button" data-presentation-prev aria-label="이전 슬라이드" aria-controls="fms-slides" disabled>‹</button>
+                <span data-presentation-count aria-live="polite">1 / 11</span>
+                <button type="button" data-presentation-next aria-label="다음 슬라이드" aria-controls="fms-slides">›</button>
+              </div>
+            </div>
+            <div class="presentation-viewport" id="fms-slides" aria-label="LLM 경로 판단 발표자료 11장" tabindex="0">
+              <div class="presentation-track">
+            <figure class="presentation-slide"><img src="assets/fms-presentation-01.png" alt="1장. LLM 경로 판단 최종 목표와 3단계 설계" width="1280" height="720"><figcaption>01 · 최종 목표와 3단계 설계</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-02.png" alt="2장. LLM 경로 판단 1단계 진행 과정" loading="lazy" width="1280" height="720"><figcaption>02 · 1단계 진행 과정</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-03.png" alt="3장. V1과 V2 경로 판단 기법 비교" loading="lazy" width="1280" height="720"><figcaption>03 · V1·V2 기법 비교</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-04.png" alt="4장. V2 최종 84쌍 시험 순위와 결론" loading="lazy" width="1280" height="720"><figcaption>04 · 84쌍 시험 결과</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-05.png" alt="5장. LLM 경로 판단 디버깅 과정" loading="lazy" width="1280" height="720"><figcaption>05 · 디버깅 과정</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-06.png" alt="6장. A* 알고리즘 채택 사유" loading="lazy" width="1280" height="720"><figcaption>06 · A* 알고리즘 채택 사유</figcaption></figure>
+            <figure class="presentation-slide">
+              <video controls preload="metadata" poster="assets/fms-presentation-09.png" aria-label="9장. LLM 경로 생성 및 시뮬레이션 주행 시연 영상">
+                <source src="assets/fms-llm-route-demo.mp4" type="video/mp4">
+                브라우저에서 이 영상을 재생할 수 없습니다.
+              </video>
+              <figcaption>09 · LLM 경로 생성 및 시뮬레이션 주행 시연 · <a href="assets/fms-llm-route-demo.mp4" target="_blank" rel="noopener noreferrer">영상 파일 열기</a></figcaption>
+            </figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-10.png" alt="10장. 시험에 사용한 지도와 그래프 입력" loading="lazy" width="1280" height="720"><figcaption>10 · 지도와 그래프 입력</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-11.png" alt="11장. V1 입력 데이터와 프롬프트" loading="lazy" width="1280" height="720"><figcaption>11 · V1 입력과 프롬프트</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-12.png" alt="12장. V2 여섯 조건의 입력과 프롬프트" loading="lazy" width="1280" height="720"><figcaption>12 · V2 입력과 프롬프트</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-13.png" alt="13장. V2 최종 다음 노드 선택 입력" loading="lazy" width="1280" height="720"><figcaption>13 · 다음 노드 선택 입력</figcaption></figure>
+              </div>
+            </div>
+            <p class="presentation-hint">버튼 또는 좌우 스와이프로 넘길 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="fms-presentation-detail">
+          <p><strong>디버깅</strong> 없는 간선 생성과 반복 경로를 인접 노드 선택·코드 검증, 재방문 제한으로 개선했습니다.</p>
+          <p><strong>다음 단계</strong> 주문 기반 다중 로봇 주행과 교착 예측, 하드웨어·주행 환경을 고려한 최적 경로를 반영할 예정입니다.</p>
         </div>
       </div>
-      <div class="fms-results">
-        <div class="sec-head">
-          <h3>LLM 경로 판단 1단계 · 10/13 결과 공유</h3>
-          <p>84개 출발·도착 쌍 × 5회, A* 경로 기준</p>
-        </div>
-        <p>전체 경로를 한 번에 생성하는 방식에서 존재하지 않는 간선이 나타나, 인접 노드 중 다음 노드를 반복 선택하는 Iterative 방식으로 전환했습니다. 코드가 각 선택의 연결을 확인합니다.</p>
-        <div class="result-grid">
-          <div class="result-card">
-            <span class="label">도착률 우선 · Kev 0.8B + 인접 정보</span>
-            <strong>100%</strong>
-            <p>도착 420/420 · 최단 경로 52.4% · 호출 중앙값 0.41초</p>
+      <div class="presentation-card collaboration-card" data-presentation-carousel>
+        <div class="presentation-header">
+          <div class="collaboration-heading">
+            <div>
+              <h3>협업 환경 셋업과 알림 연동</h3>
+              <p>Slack 채널 구성과 Jira·Confluence 셋업·연동, GitHub 작업 알림과 일정 리마인더 설정을 맡았습니다.</p>
+            </div>
+            <div class="integration-logos" aria-hidden="true">
+              <img src="assets/slack-mark.png" alt="" width="1200" height="1200" loading="lazy">
+              <img src="assets/jira-confluence-mark.png" alt="" width="800" height="400" loading="lazy">
+            </div>
           </div>
-          <div class="result-card">
-            <span class="label">최단 경로 비율 우선 · Kev 4B + 전체 정보</span>
-            <strong>75.0%</strong>
-            <p>도착 95.2% · 최단 경로 315/420 · 호출 중앙값 0.61초</p>
+          <div class="presentation-controls">
+            <button type="button" data-presentation-prev aria-label="이전 협업 화면" aria-controls="collaboration-slides" disabled>‹</button>
+            <span data-presentation-count aria-live="polite">1 / 3</span>
+            <button type="button" data-presentation-next aria-label="다음 협업 화면" aria-controls="collaboration-slides">›</button>
           </div>
         </div>
-        <p class="result-note">현재는 Iterative 방식을 채택하고 Kev 모델을 우선 검토합니다. 최단 경로 생성과 실제 주행 최적화는 진행 중입니다.</p>
+        <div class="presentation-viewport" id="collaboration-slides" aria-label="협업 환경 구성 화면 3장" tabindex="0">
+          <div class="presentation-track">
+            <figure class="presentation-slide"><img src="assets/collab-jira-slack.png" alt="Slack ros2-issue 채널에 Jira 작업 생성과 상태 변경 알림이 표시된 화면" width="1350" height="625" loading="lazy"><figcaption>01 · Jira 작업 생성·상태 변경 알림을 Slack 채널에 연결</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/collab-schedule-slack.png" alt="Slack ros2-schedule 채널의 일일 계획과 Slackbot 회의 리마인더" width="1178" height="626" loading="lazy"><figcaption>02 · 일정 공유와 Slackbot 일일 리마인더 설정</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/collab-github-slack.png" alt="Slack fms-git 채널에 GitHub push와 커밋 내용 알림이 표시된 화면" width="1212" height="622" loading="lazy"><figcaption>03 · GitHub push·커밋 알림을 Slack 채널에 연결</figcaption></figure>
+          </div>
+        </div>
+        <p class="presentation-hint">버튼 또는 좌우 스와이프로 넘길 수 있습니다.</p>
       </div>
       <a class="repo" href="https://github.com/E1I6-Logistics/Logistics_FMS">github.com/E1I6-Logistics/Logistics_FMS</a>
-      <a class="repo" href="https://www.figma.com/make/z7YojOyW17K9Ld52J3RrW2/E1I6---AX-Multi-Robot-Logistics-FMS-Dashboard-Wireframe">FMS 화면 설계</a>
     </article>
 
     <article class="proj" id="kickcan">
@@ -488,7 +545,7 @@
         <span class="chip gray">팀 프로젝트</span>
       </div>
       <h2>음주 측정 데모와 시제품 제작</h2>
-      <p class="sub">음주 측정값과 얼굴 확인 결과로 시동 허용 여부를 판단하는 장치입니다. 개인 담당은 기획과 STM32 측정 데모, 케이스 제작입니다.</p>
+      <p class="sub">음주 측정값과 얼굴 확인 결과로 시동 허용 여부를 판단하는 장치입니다.<br class="desktop-sentence-break"> 개인 담당은 기획과 STM32 측정 데모, 케이스 제작입니다.</p>
 
       <div class="proj-body">
         <div class="col">
@@ -602,7 +659,7 @@
     <div class="method">
       <div class="card">
         <h3>문제 확인</h3>
-        <p>하드웨어와 소프트웨어를 나눠서 접근합니다. 전원과 배선을 먼저 확인하고, 코드는 브레이크포인트와 watch로 상태를 관측합니다.</p>
+        <p>하드웨어와 소프트웨어를 나눠서 접근합니다.<br class="desktop-sentence-break"> 전원과 배선을 먼저 확인하고, 코드는 브레이크포인트와 watch로 상태를 관측합니다.</p>
       </div>
       <div class="card">
         <h3>확인 순서</h3>

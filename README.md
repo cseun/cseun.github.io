@@ -10,7 +10,7 @@
 
 | | 프로젝트 | 담당 | 기술 |
 | --- | --- | --- | --- |
-| 01 | **E1I6 Logistics FMS** — LLM 경로 생성과 다중 로봇 관제 | FMS 관제 화면, LLM 경로 판단 실험 (진행 중) | ROS 2 Jazzy, Nav2, Zenoh, FastAPI, PostgreSQL, React |
+| 01 | **AX MULTI-ROBOT LOGISTICS** — 팀 E1I6, 담당 파트 FMS AI | **디자인·프론트엔드:** Figma·Claude AI로 UI 설계, ChatGPT·Figma를 활용한 React 구현<br>**AI·LLM:** 모델 선정·테스트·비교와 최단 경로 생성·주행 구현<br>**협업:** Slack·Confluence·Jira 셋업·연동<br>**팀원 담당:** ROS 2/MQTT 로봇 연동, A*·예외 처리 | React, Figma, ROS 2, MQTT |
 | 02 | **Kick CAN** — CAN 기반 RC카의 계기판 노드 | Node 2 — 상태 표시와 출력 제어 | STM32, CAN, SPI, I2C |
 | 03 | **SafeKick** — 출발 전 안전 점검을 안내하는 앱 | UI/UX, 앱 화면 흐름, 프론트엔드 | React Native, Expo, SSE |
 | 04 | **음주컷** — 음주 측정 데모와 시제품 제작 | 기획, STM32 측정 데모, 케이스 모델링 | STM32, MQ-3, UART, Fusion 360 |
@@ -29,13 +29,13 @@
 ## 학력 · 교육
 
 - 신구대학교 IT소프트웨어학과(3년제) 2025년 졸업 · 학부 성적 4.18 / 4.5
-- 대한상공회의소 서울기술교육센터 AI융합 로봇 SW개발자 3기 과정 수료
+- 대한상공회의소 서울기술교육센터 AI융합 로봇 SW개발자 3기 과정 진행 중
 
 ## 기술
 
 - **언어** C / C++ / C# (WinForms) / Python
 - **웹 · 백엔드** PHP / Laravel / JavaScript / HTML, MySQL, PostgreSQL, Docker, REST API
-- **로봇 · 관제** Linux, ROS 2, Nav2, Zenoh, FastAPI
+- **로봇 · 관제** Linux, ROS 2, Nav2, MQTT, FastAPI
 - **임베디드 · 통신** STM32, CAN / UART / SPI / I2C / PWM
 - **앱 · 프론트** React, React Native, Expo
 - **협업 · 도구** Git, Jira, Confluence, Figma, Fusion 360
@@ -50,13 +50,14 @@
 
 ### 이 저장소에 대하여
 
-GitHub Pages로 서비스되는 정적 사이트입니다. 빌드 도구나 프레임워크 없이 HTML과 CSS만 사용합니다.
+GitHub Pages로 서비스되는 정적 사이트입니다. 빌드 도구나 프레임워크 없이 HTML, CSS, JavaScript를 사용합니다.
 
 ```
 index.html      단일 페이지 본문
 styles.css      스타일
+presentation.js 발표자료 넘김
 .nojekyll       Jekyll 처리 건너뛰기
-assets/         이미지 11장
+assets/         이미지와 시연 영상
 ```
 
 수정 후 `git push`하면 1~2분 내에 반영됩니다. 이미지를 교체할 때는 `assets/` 안의 파일을 같은 이름으로 덮어쓰면 되고, 가로형은 폭 1200~1400px, 세로형은 700~1000px 정도로 줄여서 올리는 편이 좋습니다.
