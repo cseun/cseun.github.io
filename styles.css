@@ -480,7 +480,8 @@ section.block { padding: 44px 0 4px; }
 .fms-media-grid .demo-video-card { margin-top: 0; }
 .kickcan-team-card .label { margin-bottom: 8px; }
 .kickcan-step-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
-.kickcan-hardware { margin-top: 12px; }
+.kickcan-hardware { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line-soft); }
+.kickcan-hardware .label { margin-bottom: 4px; }
 .kickcan-media-grid figure { min-width: 0; display: flex; flex-direction: column; }
 .kickcan-media-grid figure > img, .kickcan-media-grid figure > a > img { width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: var(--surface-muted); }
 .kickcan-media-grid figure figcaption { flex: 1; min-height: 38px; }
@@ -739,9 +740,17 @@ figcaption { margin-top: 9px; font-size: 12.5px; color: var(--text-dim); line-he
 .plc-carousel .presentation-slide { padding: 8px 8px 0; }
 .plc-carousel .presentation-header h3 { font-size: 16px; }
 .collaboration-layout { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 18px; margin-top: 18px; align-items: stretch; }
-.collaboration-overview { display: flex; flex-direction: column; min-width: 0; }
-.collaboration-overview img { width: 100%; height: auto; border-radius: var(--radius-sm); }
-.collaboration-overview figcaption { margin-top: auto; padding-top: 9px; }
+.collaboration-overview { display: flex; flex-direction: column; min-width: 0; align-self: start; }
+.collaboration-diagram { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 300px; min-height: 0; margin: 0 auto; padding: 68px 12px 14px; overflow: hidden; border: 1px solid #d9e3ef; border-radius: var(--radius-sm); background: #f6f9fd; }
+.collaboration-diagram-kicker { position: absolute; top: 11px; left: 13px; color: #587493; font-size: 9px; font-weight: 700; letter-spacing: 1.4px; }
+.collaboration-diagram h3 { position: absolute; top: 29px; left: 13px; color: #24354b; font-size: 16px; }
+.collaboration-node { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 100px; padding: 8px; border: 1px solid #d2dfed; border-radius: 10px; background: #fff; box-shadow: 0 4px 12px rgba(38, 53, 69, 0.07); text-align: center; }
+.collaboration-node strong { color: #263649; font-size: 13px; line-height: 1.25; }
+.collaboration-node > span:last-child { color: #62748a; font-size: 10px; line-height: 1.35; }
+.collaboration-node img { flex: none; width: 38px; height: 38px; object-fit: contain; }
+.collaboration-node-slack, .collaboration-node-github { grid-column: 1 / -1; justify-self: center; width: min(100%, 174px); }
+.collaboration-node-slack { border-color: #bfd5e9; }
+.collaboration-overview figcaption { align-self: center; max-width: 300px; margin-top: 9px; text-align: center; }
 .collaboration-layout .collaboration-card { min-width: 0; margin-top: 0; }
 .collaboration-heading { display: flex; align-items: center; gap: 16px; flex: 1 1 430px; }
 .collaboration-heading > div:first-child { flex: 1 1 auto; }

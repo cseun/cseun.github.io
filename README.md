@@ -16,7 +16,7 @@
 | 04 | **음주컷** — 음주 측정 데모와 시제품 제작 | 기획, STM32 측정 데모, 케이스 모델링 | STM32, MQ-3, UART, Fusion 360 |
 | 05 | **PLC MPS** — 수동 장비 제어와 HMI 화면 구성 | 수동 동작, 장비 제어, HMI 화면 | MELSEC Q, GX Works2, GT Designer3 |
 
-**기타 · 협업 환경 셋업과 알림 연동:** E1I6 프로젝트의 Slack 채널과 Jira·Confluence 셋업·연동, GitHub 작업 알림 및 일정 리마인더 설정.
+**기타 · 협업 환경 셋업과 알림 연동:** E1I6 프로젝트의 Jira 스프린트·백로그 운영 방식 설정, Slack에서 Jira 티켓 생성 및 작업 알림 연동, Confluence 문서와 Jira 이슈 연결, GitHub 작업 알림 연동 및 Slackbot 회의 리마인더 설정.
 
 저장소: [Logistics_FMS](https://github.com/E1I6-Logistics/Logistics_FMS) · [Kick CAN Node 2](https://github.com/kick-can/Node_2) · [safe-kick-app](https://github.com/safe-kick/safe-kick-app) · [StmDemo](https://github.com/Umjoo-Cut/StmDemo)
 
