@@ -214,6 +214,31 @@ section.block { padding: 44px 0 4px; }
 .sec-head h2 { font-size: 22px; letter-spacing: -0.5px; }
 .sec-head p { font-size: 14px; color: var(--text-dim); }
 
+/* ---------- education ---------- */
+
+.education-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.education-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 190px;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.institution { display: flex; align-items: center; gap: 18px; }
+.institution-logo { width: 150px; height: auto; flex: 0 0 auto; }
+.institution h3, .education-card h3 { margin-top: 3px; font-size: 18px; line-height: 1.4; }
+.institution p:not(.label), .education-topics { font-size: 14px; color: var(--text-mid); }
+.academic-score { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line-soft); padding-top: 12px; }
+.academic-score span { font-size: 13px; font-weight: 700; color: var(--text-mid); }
+.academic-score strong { color: var(--primary-ink); font-family: var(--mono); font-size: 30px; line-height: 1; white-space: nowrap; }
+.academic-score small { color: var(--text-dim); font-size: 15px; }
+.education-topics { border-top: 1px solid var(--line-soft); padding-top: 12px; }
+
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -616,6 +641,18 @@ figcaption { margin-top: 9px; font-size: 12.5px; color: var(--text-dim); line-he
 
 .repo:hover { background: var(--primary-soft); border-color: var(--primary-line); }
 
+/* ---------- FMS results ---------- */
+
+.fms-results { margin-top: 24px; }
+.fms-results .sec-head { margin-bottom: 10px; }
+.fms-results .sec-head h3 { font-size: 18px; }
+.fms-results > p { font-size: 14.5px; color: var(--text-mid); }
+.result-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+.result-card { display: grid; gap: 4px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.result-card strong { color: var(--primary-ink); font-family: var(--mono); font-size: 29px; line-height: 1.2; }
+.result-card p { font-size: 13px; color: var(--text-mid); }
+.fms-results .result-note { margin-top: 12px; }
+
 /* ---------- method + footer ---------- */
 
 .method { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
@@ -649,6 +686,7 @@ footer.site p { font-size: 13.5px; color: var(--text-dim); }
   .hero-photo { width: 172px; }
   .proj-body { grid-template-columns: minmax(0, 1fr); }
   .job { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .education-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 620px) {
@@ -665,4 +703,6 @@ footer.site p { font-size: 13.5px; color: var(--text-dim); }
   .noderow { grid-template-columns: minmax(0, 1fr) 62px; }
   .noderow .name { grid-column: 1 / -1; }
   .stage .row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .institution { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .result-grid { grid-template-columns: minmax(0, 1fr); }
 }
