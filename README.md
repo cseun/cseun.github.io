@@ -10,11 +10,13 @@
 
 | | 프로젝트 | 담당 | 기술 |
 | --- | --- | --- | --- |
-| 01 | **AX MULTI-ROBOT LOGISTICS** — 팀 E1I6, 담당 파트 FMS AI | **디자인·프론트엔드:** Figma·Claude AI로 UI 설계, ChatGPT·Figma를 활용한 React 구현<br>**AI·LLM:** 모델 선정·테스트·비교와 최단 경로 생성·주행 구현<br>**협업:** Slack·Confluence·Jira 셋업·연동<br>**팀원 담당:** ROS 2/MQTT 로봇 연동, A*·예외 처리 | React, Figma, ROS 2, MQTT |
+| 01 | **AX MULTI-ROBOT LOGISTICS** — 팀 E1I6, 담당 파트 FMS AI | **디자인·프론트엔드:** Figma·Claude AI로 UI 설계, ChatGPT·Figma를 활용한 React 구현<br>**AI·LLM:** 모델 선정·테스트·비교와 최단 경로 생성·주행 구현<br>**팀원 담당:** ROS 2/MQTT 로봇 연동, A*·예외 처리 | React, Figma, ROS 2, MQTT |
 | 02 | **Kick CAN** — CAN 기반 RC카의 계기판 노드 | Node 2 — 상태 표시와 출력 제어 | STM32, CAN, SPI, I2C |
 | 03 | **SafeKick** — 출발 전 안전 점검을 안내하는 앱 | UI/UX, 앱 화면 흐름, 프론트엔드 | React Native, Expo, SSE |
 | 04 | **음주컷** — 음주 측정 데모와 시제품 제작 | 기획, STM32 측정 데모, 케이스 모델링 | STM32, MQ-3, UART, Fusion 360 |
 | 05 | **PLC MPS** — 수동 장비 제어와 HMI 화면 구성 | 수동 동작, 장비 제어, HMI 화면 | MELSEC Q, GX Works2, GT Designer3 |
+
+**기타 · 협업 환경 셋업과 알림 연동:** E1I6 프로젝트의 Slack 채널과 Jira·Confluence 셋업·연동, GitHub 작업 알림 및 일정 리마인더 설정.
 
 저장소: [Logistics_FMS](https://github.com/E1I6-Logistics/Logistics_FMS) · [Kick CAN Node 2](https://github.com/kick-can/Node_2) · [safe-kick-app](https://github.com/safe-kick/safe-kick-app) · [StmDemo](https://github.com/Umjoo-Cut/StmDemo)
 
@@ -22,8 +24,8 @@
 
 | 기간 | 소속 | 역할 |
 | --- | --- | --- |
-| 2025.05 – 2026.01 | 엑서테크 (프리랜서) | BMS 검사장비 테스트 보조와 C# S/W 유지보수, 미국 현장 파견 2회 |
-| 2023.09 – 2025.04 | 에어텔닷컴 그룹 | 웹 백엔드 1년 8개월 — PHP / Laravel 기반 상품 · 주문 · 정산 데이터 처리 |
+| 2025.04 – 2026.01 | 엑서테크 (프리랜서) | 검사장비 S/W 유지보수·현장 대응, BMS 검사장비 CS·테스트 보조와 C# S/W 유지보수, 미국 현장 파견 2회 (개발 1.5개월 / 비개발 3개월) |
+| 2023.09 – 2025.03 | 에어텔닷컴 그룹 | 웹 백엔드 1년 7개월 — PHP / Laravel 기반 상품 · 주문 · 정산 데이터 처리 |
 | 2017.12 – 2019.06 | 마케팅하이랜즈 | 비개발 — 베트남 다낭 현지 호텔 B2B 세일즈와 여행 운영 |
 
 ## 학력 · 교육

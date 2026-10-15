@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 470" role="img" aria-labelledby="title description">
+  <title id="title">E1I6 협업 환경 연동도</title>
+  <desc id="description">Jira와 GitHub 알림을 Slack 채널에 연결하고, Confluence 문서를 Jira 작업과 연결한 구성</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1L9 5 1 9" fill="none" stroke="#8aa0b9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="420" height="470" rx="16" fill="#f6f9fd"/>
+  <text x="20" y="32" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.8" fill="#587493">E1I6 · COLLABORATION</text>
+  <text x="20" y="64" font-family="Noto Sans KR, Malgun Gothic, Arial, sans-serif" font-size="23" font-weight="700" fill="#24354b">협업 도구 연결 구성</text>
+
+  <rect x="18" y="88" width="384" height="150" rx="14" fill="#fff" stroke="#d9e3ef" stroke-width="2"/>
+  <rect x="34" y="104" width="38" height="38" rx="9" fill="#512454"/>
+  <text x="53" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#fff">S</text>
+  <text x="84" y="128" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#263649">Slack</text>
+  <text x="34" y="166" font-family="Arial, sans-serif" font-size="13" fill="#405873"># ros2-issue</text>
+  <text x="169" y="166" font-family="Noto Sans KR, Malgun Gothic, Arial, sans-serif" font-size="13" fill="#667990">Jira 작업 알림</text>
+  <text x="34" y="192" font-family="Arial, sans-serif" font-size="13" fill="#405873"># fms-git</text>
+  <text x="169" y="192" font-family="Noto Sans KR, Malgun Gothic, Arial, sans-serif" font-size="13" fill="#667990">GitHub 커밋 알림</text>
+  <text x="34" y="218" font-family="Arial, sans-serif" font-size="13" fill="#405873"># ros2-schedule</text>
+  <text x="169" y="218" font-family="Noto Sans KR, Malgun Gothic, Arial, sans-serif" font-size="13" fill="#667990">일정 · 리마인더</text>
+
+  <path d="M110 273V244" fill="none" stroke="#8aa0b9" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M310 273V244" fill="none" stroke="#8aa0b9" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="18" y="275" width="184" height="80" rx="12" fill="#fff" stroke="#c9d9ee" stroke-width="2"/>
+  <rect x="34" y="290" width="32" height="32" rx="8" fill="#e5efff"/>
+  <text x="50" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#155bb7">J</text>
+  <text x="78" y="311" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#263649">Jira</text>
+  <text x="34" y="340" font-family="Noto Sans KR, Malgun Gothic, Arial, sans-serif" font-size="13" fill="#62748a">이슈 생성 · 상태 변경</text>
+
+  <rect x="218" y="275" width="184" height="80" rx="12" fill="#fff" stroke="#d4dfeb" stroke-width="2"/>
+  <rect x="234" y="290" width="32" height="32" rx="8" fill="#e9edf2"/>
+  <text x="250" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#344254">G</text>
+  <text x="278" y="311" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#263649">GitHub</text>
+  <text x="234" y="340" font-family="Noto Sans KR, Malgun Gothic, Arial, sans-serif" font-size="13" fill="#62748a">push · 커밋 알림</text>
+
+  <path d="M110 386V360" fill="none" stroke="#8aa0b9" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <rect x="18" y="388" width="384" height="65" rx="12" fill="#fff" stroke="#c9d9ee" stroke-width="2"/>
+  <rect x="34" y="403" width="32" height="32" rx="8" fill="#e5efff"/>
+  <text x="50" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#155bb7">C</text>
+  <text x="78" y="416" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#263649">Confluence</text>
+  <text x="78" y="438" font-family="Noto Sans KR, Malgun Gothic, Arial, sans-serif" font-size="13" fill="#62748a">Jira 작업과 문서 연결</text>
+</svg>
