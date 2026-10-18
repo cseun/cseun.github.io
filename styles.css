@@ -490,6 +490,7 @@ section.block { padding: 44px 0 4px; }
 .kickcan-hardware .label { margin-bottom: 4px; }
 .kickcan-media-grid figure { min-width: 0; display: flex; flex-direction: column; }
 .kickcan-media-grid figure > img, .kickcan-media-grid figure > a > img { width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: var(--surface-muted); }
+.kickcan-media-grid figure > a > .kickcan-real-photo { object-fit: cover; }
 .kickcan-media-grid figure figcaption { flex: 1; min-height: 38px; }
 
 .col { display: grid; min-width: 0; width: 100%; gap: 12px; align-content: start; }
