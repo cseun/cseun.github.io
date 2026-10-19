@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>최세은 포트폴리오 · 디자인 설정</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e9e9ed;color:#20242b;font:14px/1.5 -apple-system,"Malgun Gothic",sans-serif}button,a{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #6a75c8;outline-offset:3px}.toolbar{background:#fff;border-bottom:1px solid #d7d9df;padding:14px 22px;position:relative;z-index:1}.heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}.heading h1{font-size:18px;margin:0}.heading p{margin:0;color:#626975;font-size:12px}.heading a{color:#48536d}.palettes{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}.palette{display:flex;text-align:left;align-items:center;gap:9px;padding:9px;border:1px solid #dfe1e7;border-radius:9px;background:#fff;color:#343b48;min-width:0}.palette[aria-pressed=true]{border:2px solid #343b48;padding:8px;box-shadow:0 2px 7px #17203916}.swatch{display:flex;flex:none;width:32px;height:36px;overflow:hidden;border-radius:5px;border:1px solid #00000018}.swatch i{width:50%;height:100%}.palette strong{display:block;font-size:12px}.palette small{display:block;color:#717784;font-size:10px;line-height:1.4}.controls{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:12px}.segments{display:flex;gap:4px}.segments button{padding:5px 10px;background:#f2f3f6;border:1px solid transparent;border-radius:5px;color:#555e6d;font-size:12px}.segments button[aria-pressed=true]{background:#252e40;color:#fff}.opinion{flex:1;min-width:220px;color:#4c5666;font-size:12px;margin:0}.stage{height:calc(100dvh - var(--toolbar-height,200px));min-height:400px;display:flex;justify-content:center;overflow:hidden;background:#dfe1e6;padding:0}.stage.mobile{padding:12px}.stage iframe{width:100%;height:100%;border:0;background:white}.stage.mobile iframe{width:390px;max-width:100%;border-radius:14px;box-shadow:0 4px 20px #0002}.notice{color:#737a86;font-size:11px;white-space:nowrap}@media(max-width:1100px){.palettes{grid-template-columns:repeat(4,minmax(0,1fr))}.palette small{font-size:9px}.toolbar{padding:12px}}@media(max-width:620px){.palettes{display:flex;overflow-x:auto;padding-bottom:5px}.palette{flex:0 0 148px}.heading h1{font-size:16px}.controls{gap:8px}.opinion{flex-basis:100%;order:3}.notice{display:none}.segments button{padding:5px 8px}.heading p{font-size:11px}}
+.palettes{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}.palette[hidden]{display:none}.collections{margin-left:auto;flex-wrap:wrap}.palette .new-label{color:#6f51a5;font-weight:700}.swatch{width:44px}.swatch i{flex:1;min-width:0}.palette small{overflow-wrap:anywhere}
+.card-settings{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;margin-top:12px;padding-top:12px;border-top:1px solid #e4e6ec}.range-setting{display:grid;grid-template-columns:auto 120px 40px;gap:8px;align-items:center;font-size:12px;color:#4c5666}.range-setting input{width:120px;accent-color:#40577c;cursor:pointer}.range-setting output{font-variant-numeric:tabular-nums;text-align:right}.settings-actions{display:flex;gap:6px;flex-wrap:wrap}.settings-actions button{border:1px solid #cfd5df;border-radius:5px;background:#fff;color:#35445d;padding:6px 10px;font-size:12px}.settings-actions .download{background:#27364b;color:#fff;border-color:#27364b}.settings-help{margin:8px 0 0;color:#687382;font-size:11px}.settings-status{font-size:12px;color:#35445d;min-height:18px}.fold-palettes{border:0;background:none;color:#52627a;text-decoration:underline;cursor:pointer;font-size:12px}.toolbar.collapsed .palettes,.toolbar.collapsed .collections{display:none}@media(max-width:620px){.range-setting{grid-template-columns:88px minmax(90px,1fr) 40px;width:100%}.range-setting input{width:100%}.card-settings{gap:8px}.settings-help{line-height:1.5}}
+.advanced-settings{margin-top:10px;border:1px solid #e1e5eb;border-radius:7px;background:#f8f9fb;padding:8px 12px}.advanced-settings summary{cursor:pointer;color:#40516b;font-size:12px;font-weight:700}.advanced-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px}.advanced-grid fieldset{margin:0;min-width:0;border:0;padding:0;display:grid;align-content:start;gap:7px}.advanced-grid legend{font-size:12px;font-weight:700;color:#34465f;margin-bottom:5px}.advanced-grid .range-setting{grid-template-columns:85px minmax(70px,1fr) 42px}.advanced-grid .range-setting input{width:100%}.color-setting{display:flex;gap:8px;align-items:center;font-size:12px;color:#4c5666}.color-setting input[type=color]{width:38px;height:26px;padding:2px;border:1px solid #ccd3de;border-radius:4px}.color-setting label{display:flex;align-items:center;gap:4px}@media(max-width:850px){.advanced-grid{grid-template-columns:1fr}.advanced-grid .range-setting{width:100%}}
+</style>
+</head>
+<body>
+<header class="toolbar">
+  <div class="heading">
+    <h1>포트폴리오 디자인 설정</h1>
+    <button class="fold-palettes" type="button" aria-expanded="true">색 조합 접기</button>
+    <div class="segments collections" aria-label="색 조합 모음">
+      <button data-collection="images">첨부 이미지 12종</button>
+      <button data-collection="originals">원래 컬러</button>
+      <button data-collection="more">추가 O–V</button>
+      <button data-collection="new">G–N</button>
+      <button data-collection="existing">A–F</button>
+    </div>
+    <p>첨부 이미지 + Colorion <a href="https://2colors.colorion.co/" target="_blank" rel="noopener noreferrer">1</a> · <a href="https://2colors.colorion.co/page/2" target="_blank" rel="noopener noreferrer">2</a> · <a href="https://2colors.colorion.co/page/3" target="_blank" rel="noopener noreferrer">3</a></p>
+  </div>
+  <div class="palettes" aria-label="색 조합 선택"></div>
+  <div class="controls">
+    <nav class="segments sections" aria-label="확인할 화면">
+      <button data-section="top">프로필</button>
+      <button data-section="projects">프로젝트</button>
+      <button data-section="fms">FMS</button>
+      <button data-section="plc">PLC</button>
+    </nav>
+    <div class="segments devices" aria-label="화면 너비">
+      <button data-device="desktop" aria-pressed="true">PC</button>
+      <button data-device="mobile" aria-pressed="false">모바일</button>
+    </div>
+    <p class="opinion" aria-live="polite"></p>
+    <span class="notice">색을 누르면 아래 실제 페이지에 적용됩니다.</span>
+  </div>
+  <div class="card-settings" aria-label="카드 디자인 조절">
+    <label class="range-setting" for="shadow-strength">그림자 강도<input id="shadow-strength" type="range" min="0" max="30" step="1" value="12"><output for="shadow-strength">12%</output></label>
+    <label class="range-setting" for="shadow-blur">그림자 퍼짐<input id="shadow-blur" type="range" min="0" max="48" step="1" value="18"><output for="shadow-blur">18px</output></label>
+    <label class="range-setting" for="card-radius">모서리 둥글기<input id="card-radius" type="range" min="0" max="32" step="1" value="12"><output for="card-radius">12px</output></label>
+    <div class="settings-actions">
+      <button type="button" id="reset-cards">카드 초기화</button>
+      <button type="button" id="copy-settings">설정 링크 복사</button>
+      <button type="button" class="download" id="download-theme">설정 CSS 받기</button>
+    </div>
+    <span class="settings-status" role="status"></span>
+  </div>
+  <details class="advanced-settings" open>
+    <summary>그림자 위치 · 테두리 · 프로필 사진</summary>
+    <div class="advanced-grid">
+      <fieldset><legend>그림자 위치</legend>
+        <label class="range-setting" for="shadow-x">가로 위치<input id="shadow-x" type="range" min="-24" max="24" value="0"><output for="shadow-x">0px</output></label>
+        <label class="range-setting" for="shadow-y">세로 위치<input id="shadow-y" type="range" min="-24" max="24" value="6"><output for="shadow-y">6px</output></label>
+      </fieldset>
+      <fieldset><legend>카드 테두리</legend>
+        <label class="range-setting" for="border-width">두께<input id="border-width" type="range" min="0" max="5" value="1"><output for="border-width">1px</output></label>
+        <div class="color-setting"><label for="border-color">색상 <input id="border-color" type="color" value="#dfe4eb"></label><label><input id="border-auto" type="checkbox" checked>팔레트 자동</label></div>
+      </fieldset>
+      <fieldset><legend>프로필 사진 크기</legend>
+        <label class="range-setting" for="profile-size">PC 너비<input id="profile-size" type="range" min="90" max="280" value="190"><output for="profile-size">190px</output></label>
+        <label class="range-setting" for="profile-mobile">모바일 너비<input id="profile-mobile" type="range" min="140" max="320" value="240"><output for="profile-mobile">240px</output></label>
+      </fieldset>
+    </div>
+  </details>
+  <p class="settings-help">조절한 값은 이 브라우저에 저장됩니다. 설정 링크로 같은 모습을 공유할 수 있습니다. 사이트 기본 디자인은 내려받은 CSS를 반영한 뒤 배포하면 바뀝니다.</p>
+</header>
+<main class="stage"><iframe title="현재 포트폴리오 색 조합 미리보기"></iframe></main>
+<script>
+'use strict';
+const themes = [
+  {id:'a',name:'A · 네이비 & 핑크',primary:'#333D79',accent:'#FAEBEF',recommend:'1순위',opinion:'추천 1순위 · 네이비로 화면을 정돈하고 옅은 핑크로 카드에 온기를 줍니다. 로봇 관제 화면과 문서가 차분하게 보입니다.'},
+  {id:'b',name:'B · 블루 & 골드',primary:'#00539C',accent:'#FFD662',recommend:'2순위',opinion:'추천 2순위 · 기술 포트폴리오에 익숙한 블루에 골드로 포인트를 줍니다. 제목과 진행 상태를 눈에 띄게 하기 좋습니다.'},
+  {id:'c',name:'C · 포레스트 & 옐로',primary:'#2C5F2D',accent:'#FFE77A',opinion:'녹색 계열을 유지하며 더 밝게 · 기존 녹색 안보다 산뜻합니다. 노란색은 진행 중 표시와 버튼에 집중했습니다.'},
+  {id:'d',name:'D · 딥 퍼플 & 샌드',primary:'#343148',accent:'#D7C49E',opinion:'정제된 인상 · 짙은 보라와 샌드 조합입니다. 프로젝트 사진이 많은 화면에서 차분하게 배경을 잡아줍니다.'},
+  {id:'e',name:'E · 브라운 & 크림',primary:'#755139',accent:'#F2EDD7',opinion:'따뜻한 인상 · 장비 실물과 제작 사진에 잘 어울립니다. 기술 중심의 선명한 인상은 A나 B가 더 강합니다.'},
+  {id:'f',name:'F · 차콜 & 에메랄드',primary:'#101820',accent:'#1A7A4C',opinion:'단단한 인상 · 차콜을 중심으로 에메랄드를 사용합니다. 앱 화면과 관제 대시보드가 많은 포트폴리오에 어울립니다.'},
+  {id:'g',fresh:true,name:'G · 슬레이트 & 미스트',primary:'#50586C',accent:'#DCE2F0',recommend:'추천',opinion:'새 후보 추천 · 푸른 회색과 연한 미스트 조합입니다. 강한 원색 없이 기술 문서와 화면 캡처를 차분하게 받쳐줍니다.'},
+  {id:'h',fresh:true,name:'H · 로즈 브라운 & 아이보리',primary:'#815854',accent:'#F9EBDE',recommend:'따뜻한 톤 추천',opinion:'E 브라운이 마음에 들었다면 이 조합도 추천합니다. 붉은 기가 도는 브라운과 아이보리가 기존 E보다 부드러운 인상을 줍니다.'},
+  {id:'i',fresh:true,name:'I · 미드나잇 & 민트',primary:'#00203F',accent:'#ADEFD1',recommend:'추천',opinion:'선명한 기술 포트폴리오 · 짙은 네이비와 민트 조합입니다. FMS와 React 화면을 강조하면서 녹색 포인트도 살릴 수 있습니다.'},
+  {id:'j',fresh:true,name:'J · 퍼플 & 코랄',primary:'#5F4B8B',accent:'#E69A8D',opinion:'개성이 있는 조합 · 퍼플과 차분한 코랄입니다. 프론트엔드와 UI 디자인 담당을 조금 더 강조하고 싶을 때 어울립니다.'},
+  {id:'k',fresh:true,name:'K · 그레이 & 라임',primary:'#606060',accent:'#D6ED17',opinion:'활기 있는 조합 · 중간 회색에 라임을 더했습니다. 진행 상태와 프로젝트 이동 버튼이 또렷해지는 방향입니다.'},
+  {id:'l',fresh:true,name:'L · 그래파이트 & 코랄',primary:'#2D2926',accent:'#ED6F63',opinion:'따뜻하고 선명한 조합 · 거의 검정에 가까운 그래파이트와 코랄입니다. 프로젝트 제목과 개인 담당 카드를 강조하기 좋습니다.'},
+  {id:'m',fresh:true,name:'M · 코발트 & 아이스 블루',primary:'#0063B2',accent:'#9CC3D5',opinion:'시원한 조합 · 코발트와 연한 블루입니다. 관제 소프트웨어와 하드웨어 프로젝트를 같은 계열로 정돈할 수 있습니다.'},
+  {id:'n',fresh:true,name:'N · 플럼 & 실버 그레이',primary:'#603F83',accent:'#C7D3D4',opinion:'차분한 개성 · 짙은 플럼과 은은한 회색입니다. 핑크나 코랄의 따뜻한 포인트 없이 보라 계열을 비교할 수 있습니다.'},
+  {id:'o',collection:'more',name:'O · 딥 틸 & 바닐라',primary:'#02343F',accent:'#F0EDCC',recommend:'추천',opinion:'이번 추가안 추천 · 녹색과 파랑 사이의 딥 틸에 바닐라를 더했습니다. 관제 화면의 선명함과 실물 사진의 따뜻한 느낌을 함께 살립니다.'},
+  {id:'p',collection:'more',name:'P · 오버진 & 세이지',primary:'#331B3F',accent:'#ACC7B4',recommend:'개성 있는 추천',opinion:'독특하지만 차분한 조합 · 짙은 가지색과 회색빛 세이지입니다. 기존 보라·핑크 조합보다 차분하고 녹색 포인트가 돋보입니다.'},
+  {id:'q',collection:'more',name:'Q · 버건디 & 살구',primary:'#A4193D',accent:'#FFDFB9',opinion:'강한 인상 · 버건디와 연한 살구 조합입니다. 프로젝트 제목과 상단 프로필의 존재감을 크게 만들고 싶을 때 비교해 보세요.'},
+  {id:'r',collection:'more',name:'R · 올리브 & 오커',primary:'#616247',accent:'#DAA03D',opinion:'장비 사진에 어울리는 조합 · 회색빛 올리브와 황토색 오커입니다. 따뜻한 작업실 사진과 하드웨어 제작 과정을 자연스럽게 연결합니다.'},
+  {id:'s',collection:'more',name:'S · 잉크 블루 & 머스터드',primary:'#1E4174',accent:'#DDA94B',opinion:'B 블루·골드보다 차분한 조합 · 파랑과 노랑의 채도를 조금 낮춘 느낌입니다. 기술 포트폴리오의 선명함을 유지하면서 부드럽게 정돈합니다.'},
+  {id:'t',collection:'more',name:'T · 스틸 블루 & 실버',primary:'#195190',accent:'#A2A2A1',opinion:'중립적인 기술 이미지 · 스틸 블루와 실버 조합입니다. 따뜻한 배색보다 소프트웨어·장비 개발 중심의 인상을 원할 때 어울립니다.'},
+  {id:'u',collection:'more',name:'U · 카본 & 앰버',primary:'#101820',accent:'#F2AA4C',recommend:'강조형 추천',opinion:'프로젝트 강조에 좋은 조합 · 카본과 앰버입니다. F의 초록 포인트 대신 따뜻한 주황을 사용해 진행 상태와 주요 작업을 또렷하게 보여줍니다.'},
+  {id:'v',collection:'more',name:'V · 블랙 & 화이트',primary:'#000000',accent:'#FFFFFF',opinion:'색을 최소화한 조합 · 검정과 흰색으로 사진과 화면 캡처 자체에 집중합니다. 포인트 색이 부담스럽다면 다른 후보의 비교 기준으로도 좋습니다.'},
+  {id:'original-blue',collection:'originals',name:'처음 블루 톤',primary:'#2777BD',accent:'#91BD53',legacy:true,opinion:'색상 변경 전의 블루·화이트 배색입니다. 현재 레이아웃에서 원래 블루 톤을 비교할 수 있습니다.'},
+  {id:'original',collection:'originals',name:'현재 녹색 톤',primary:'#013328',accent:'#CC8B65',passThrough:true,opinion:'현재 저장된 녹색·베이지·코랄 배색입니다. 원래 블루 톤과 함께 비교할 수 있습니다.'},
+  {id:'img1',collection:'images',name:'사진 1 · 블루 & 로즈',primary:'#113062',secondary:'#004594',accent:'#FFAEAF',strong:'#B14156',colors:['#4A66A4','#004594','#113062','#FFAEAF','#E27686','#B14156'],opinion:'사진 1에서 추출 · 네이비와 로열 블루로 제목·관제를 정돈하고, 연한 핑크는 AI 카드에, 짙은 로즈는 예정 태그에 사용했습니다.'},
+  {id:'img2',collection:'images',name:'사진 2 · 라벤더',primary:'#7164B4',secondary:'#8F9FE4',accent:'#BCA5D4',light:'#EFE2FA',colors:['#EFE2FA','#BCA5D4','#BACBFE','#7164B4','#8F9FE4'],opinion:'사진 2의 표기 색상 사용 · 라벤더와 페리윙클을 카드·태그에 나눴습니다. 전체가 연해지지 않도록 제목은 진한 보라로 잡았습니다.'},
+  {id:'img3',collection:'images',name:'사진 3 · 블루 & 포레스트',primary:'#0E1D25',secondary:'#3C82A1',accent:'#9FC5A8',strong:'#0F7B5D',light:'#B8D1DD',colors:['#B8D1DD','#3C82A1','#0E1D25','#9FC5A8','#0F7B5D','#003D2D'],recommend:'추천',opinion:'사진 3의 RGB 값 사용 · 관제와 UI에는 블루를, AI와 진행 상태에는 포레스트 그린을 배치했습니다. 이번 이미지 후보 중 기술 포트폴리오에 가장 추천합니다.'},
+  {id:'img4a',collection:'images',name:'모음 1 · 블루 & 모브',primary:'#4E6F9A',secondary:'#D181C0',accent:'#FFC2F1',light:'#BCAFA9',colors:['#4E6F9A','#7299C4','#D181C0','#FFC2F1','#BCAFA9'],opinion:'사진 4 · 좌상단 인테리어 팔레트. 차분한 블루에 모브와 연한 핑크를 더해 UI·AI 담당 카드를 구분했습니다.'},
+  {id:'img4b',collection:'images',name:'모음 2 · 오렌지 & 아쿠아',primary:'#34B5DD',secondary:'#F35410',accent:'#FC7E10',light:'#FBD3AF',colors:['#FBD3AF','#FC7E10','#F35410','#34B5DD','#90D7ED'],opinion:'사진 4 · 상단 가운데 고양이 팔레트. 아쿠아와 오렌지를 나눠 썼습니다. 읽기 쉬운 제목과 메뉴를 위해 아쿠아를 어둡게 조정했습니다.'},
+  {id:'img4c',collection:'images',name:'모음 3 · 블루 & 선플라워',primary:'#4E86B7',secondary:'#959D6C',accent:'#FCCD4B',light:'#F9E292',colors:['#8BBCE4','#4E86B7','#FCCD4B','#F9E292','#959D6C'],opinion:'사진 4 · 우상단 꽃 팔레트. 블루 바탕에 노란 포인트와 올리브 카드 강조를 더했습니다. 제목에는 읽기 편한 진한 블루를 사용했습니다.'},
+  {id:'img4d',collection:'images',name:'모음 4 · 미드나잇 블루',primary:'#0A1F54',secondary:'#2C4CA1',accent:'#7DA0FA',light:'#4A75DE',colors:['#7DA0FA','#4A75DE','#2C4CA1','#0A1F54','#000000'],opinion:'사진 4 · 가운데 왼쪽 도시 팔레트. 여러 깊이의 블루와 검정으로 통일해 FMS와 장비 화면에 집중하도록 했습니다.'},
+  {id:'img4e',collection:'images',name:'모음 5 · 커피 & 터쿼이즈',primary:'#784C3F',secondary:'#1A81AC',accent:'#69C6E7',light:'#CB9A89',colors:['#1A81AC','#26A1CD','#69C6E7','#CB9A89','#784C3F'],recommend:'추천',opinion:'사진 4 · 가운데 커피 팔레트. 브라운 메뉴와 터쿼이즈 AI 카드로 따뜻함과 기술적인 느낌을 함께 살렸습니다.'},
+  {id:'img4f',collection:'images',name:'모음 6 · 일렉트릭 퍼플',primary:'#6D37AF',secondary:'#204BD5',accent:'#B081E9',light:'#D3D7E2',colors:['#D3D7E2','#204BD5','#3898E5','#B081E9','#6D37AF'],opinion:'사진 4 · 가운데 오른쪽 네온 팔레트. 코발트·보라·라일락으로 화면 구현과 AI 담당을 선명하게 구분했습니다.'},
+  {id:'img4g',collection:'images',name:'모음 7 · 포레스트 & 워터',primary:'#2D7A8E',secondary:'#408846',accent:'#9FE173',light:'#6CCAD4',colors:['#408846','#57AB5D','#9FE173','#6CCAD4','#2D7A8E'],opinion:'사진 4 · 좌하단 숲 팔레트. 녹색과 청록을 함께 사용한 밝은 배색입니다. 초록 포인트를 원할 때 비교해 보세요.'},
+  {id:'img4h',collection:'images',name:'모음 8 · 세일링 블루',primary:'#4C6B9A',secondary:'#6189BA',accent:'#A8C1EA',light:'#CFCBC8',colors:['#4C6B9A','#6189BA','#A8C1EA','#FFFFFF','#CFCBC8'],recommend:'추천',opinion:'사진 4 · 하단 가운데 요트 팔레트. 차분한 블루와 흰색·회색 중심이라 프로젝트 캡처가 돋보이는 안정적인 선택입니다.'},
+  {id:'img4i',collection:'images',name:'모음 9 · 크리스털 블루',primary:'#2B6EC9',secondary:'#2591DC',accent:'#79E1FA',light:'#B0EBF9',colors:['#2B6EC9','#2591DC','#4AB9F1','#79E1FA','#B0EBF9'],opinion:'사진 4 · 우하단 크리스털 팔레트. 파랑에서 시안으로 이어지는 시원한 배색입니다. 밝고 선명한 관제 포트폴리오 느낌입니다.'}
+];
+const paletteList=document.querySelector('.palettes');
+const frame=document.querySelector('iframe');
+const stage=document.querySelector('.stage');
+const params=new URLSearchParams(location.search);
+const storageKey='portfolio-style-lab-v1';
+let stored={};try{stored=JSON.parse(localStorage.getItem(storageKey)||'{}')||{};}catch{}
+const candidate=params.get('palette')||stored.palette;
+let current=themes.some(t=>t.id===candidate)?candidate:'original-blue';
+function groupOf(theme){return theme?.collection||(theme?.fresh?'new':'existing');}
+let collection=groupOf(themes.find(t=>t.id===current));
+let section=['top','projects','fms','plc'].includes(params.get('section')||stored.section)?(params.get('section')||stored.section):'fms';
+let device=(params.get('device')||stored.device)==='mobile'?'mobile':'desktop';
+const cardDefaults={shadow:13,blur:0,radius:11,x:2,y:5,border:0,borderColor:'#dfe4eb',borderAuto:true,photo:280,photoMobile:240};
+function setting(key,max,min=0){const raw=params.get(key)??stored[key]??cardDefaults[key];const n=Number(raw);return Number.isFinite(n)?Math.round(Math.min(max,Math.max(min,n))):cardDefaults[key];}
+const colorCandidate=params.get('borderColor')??stored.borderColor??cardDefaults.borderColor;
+let cardSettings={shadow:setting('shadow',30),blur:setting('blur',48),radius:setting('radius',32),x:setting('x',24,-24),y:setting('y',24,-24),border:setting('border',5),borderColor:/^#[a-f\d]{6}$/i.test(colorCandidate)?colorCandidate:cardDefaults.borderColor,borderAuto:String(params.get('borderAuto')??stored.borderAuto??true)!=='false',photo:setting('photo',280,90),photoMobile:setting('photoMobile',320,140)};
+const rangeControls=[['shadow-strength','shadow','%'],['shadow-blur','blur','px'],['card-radius','radius','px'],['shadow-x','x','px'],['shadow-y','y','px'],['border-width','border','px'],['profile-size','photo','px'],['profile-mobile','photoMobile','px']];
+let ready=false;
+function rgb(hex){return hex.match(/[a-f\d]{2}/gi).map(n=>parseInt(n,16));}
+function mix(a,b,w){return '#'+rgb(a).map((v,i)=>Math.round(v*(1-w)+rgb(b)[i]*w).toString(16).padStart(2,'0')).join('');}
+function lum(hex){return rgb(hex).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;}).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0);}
+function ratio(a,b){const x=lum(a),y=lum(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05);}
+function ink(bg){return ratio(bg,'#101820')>=ratio(bg,'#ffffff')?'#101820':'#ffffff';}
+function readable(color){let result=color;while(ratio(result,'#ffffff')<4.5)result=mix(result,'#000000',.08);return result;}
+function themeCss(t){
+  const p=readable(t.primary),a=t.accent,soft=mix(p,'#ffffff',.93),line=mix(p,'#ffffff',.78),bg=mix(t.light||a,'#ffffff',.88),muted=mix(a,'#ffffff',.70),accentInk=ink(a),onDark=ratio(p,a)>=4.5?a:mix(a,'#ffffff',.65);
+  let css=`:root{--bg:${bg};--surface:#fff;--surface-muted:${muted};--line:${mix(p,'#ffffff',.85)};--line-soft:${mix(p,'#ffffff',.93)};--text:#18202b;--text-mid:#46505e;--text-dim:#667180;--primary:${p};--primary-ink:${p};--primary-soft:${soft};--primary-line:${line};--cyan:${a};--cyan-ink:${p};--success:${p};--success-ink:${p};--success-soft:${soft};--warning-ink:${p};--warning-soft:${muted};--danger-ink:${p};--danger-soft:${muted};--purple-ink:${p};--purple-soft:${muted};--shadow:0 4px 16px ${p}12}
+  .topbar{background:${p};border-bottom-color:${p}}.brand{color:#fff}.brand small,.navlinks a{color:${mix(p,'#ffffff',.88)}}.navlinks a:hover,.navlinks a:focus-visible{background:${a};color:${accentInk}}
+  .hero-card{background:${p};border-color:${p};color:#fff}.hero .eyebrow{color:${onDark}}.hero h1 span{color:${mix(p,'#ffffff',.86)}}.hero-links a{color:#fff}.hero-links span{color:${mix(p,'#ffffff',.75)}}.hero-links a:hover strong{color:${onDark}}.hero .chip.blue{background:#ffffff18;border-color:#ffffff66;color:#fff}.hero .chip.green{background:${a};border-color:${a};color:${accentInk}}
+  #projects{background:${mix(a,'#ffffff',.35)};border-color:${line}}#projects .sec-head{border-color:${line}}.projcard.featured{background:${p};border-color:${p}}.projcard.featured .no,.projcard.featured .body::after{color:${onDark}}.projcard.featured p{color:${mix(p,'#ffffff',.90)}}.projcard:hover,.projcard:focus-visible{box-shadow:0 10px 26px ${p}26}
+  .chip.green,.chip.blue{border-color:${line}}.chip.amber,.education-status{background:${a};border-color:${mix(a,p,.15)};color:${accentInk}}.chip.purple,.tag-edu{background:${muted};border-color:${line};color:${p}}
+  .mine.ai{background:${muted};border-color:${line};border-left-color:${p}}.mine.ai .label{color:${p}}.mine.ai .pill{background:#fff;border-color:${line};color:${p}}.mine.ai .pill.planned{background:${a};border-color:${mix(a,p,.15)};color:${accentInk}}
+  .note{background:${muted};border-color:${line};border-left-color:${p};color:#46505e}.note b{color:${p}}.job.a,.job.b{border-left-color:${p}}.job.c{border-left-color:${mix(a,p,.35)}}.job.a .when,.job.c .when{color:${p}}.theirs{border-left-color:${line}}
+  .b-c,.b-api,.b-ros,.b-stm,.b-sql{background:${soft};color:${p}}.b-php,.b-pg,.b-docker,.b-proto,.b-jira{background:${muted};color:${p}}.b-lar,.b-js,.b-git{background:${mix(a,'#ffffff',.55)};color:${ink(mix(a,'#ffffff',.55))}}.b-react,.b-tool,.b-py{background:#f0f2f5;color:#46505e}.flow .node.ok{border-color:${line}}.flow .arrow{color:${line}}.education-documents a:hover{background:${soft}}`;
+  if(t.colors){
+    const s=t.secondary||p,si=readable(s),ss=mix(s,'#ffffff',.91),sl=mix(s,'#ffffff',.70),strong=t.strong||a,last=t.colors[t.colors.length-1];
+    css+=`.hero-card{background:linear-gradient(120deg,${p},${mix(si,p,.6)})}#projects{background:${mix(t.light||a,'#ffffff',.55)}}.mine.ai{background:${ss};border-color:${sl};border-left-color:${s}}.mine.ai .label{color:${si}}.mine.ai .pill{border-color:${sl};color:${si}}.mine.ai .pill.planned{background:${strong};border-color:${strong};color:${ink(strong)}}.b-php,.b-pg,.b-docker,.b-proto,.b-jira{background:${ss};color:${si}}.chip.purple,.tag-edu{background:${mix(t.colors[3]||a,'#ffffff',.75)};color:${readable(t.colors[3]||a)};border-color:${line}}.chip.green{background:${mix(last,'#ffffff',.83)};color:${readable(last)};border-color:${mix(last,'#ffffff',.60)}}.hero .chip.green{background:${a};color:${accentInk};border-color:${a}}.note{background:${mix(t.light||a,'#ffffff',.80)};border-left-color:${s}}.collaboration-node-slack{border-color:${sl}}.job.a{border-left-color:${s}}`;
+  }
+  if(t.legacy){css+=`:root{--bg:#F1F4F7;--surface-muted:#F3F6FA;--line:#DFE4EB;--line-soft:#E8ECF2;--text:#20242B;--text-mid:#4A5568;--text-dim:#75808E;--primary:#2777BD;--primary-ink:#1C619E;--primary-soft:#EDF5FC;--primary-line:#BDD8EE;--success:#91BD53;--success-ink:#4C762E;--success-soft:#F2F8E9;--warning-ink:#C98720;--warning-soft:#FFF5DF}.topbar{background:#F1F4F7F2;border-color:#DFE4EB}.brand{color:#20242B}.brand small,.navlinks a{color:#4A5568}.navlinks a:hover{background:#FFF;color:#20242B}.hero-card{background:linear-gradient(110deg,#FFF 57%,#F4F8FC);border-color:#DFE4EB;color:#20242B}.hero .eyebrow{color:#2777BD}.hero h1 span{color:#4A5568}.hero-links{border-color:#E8ECF2}.hero-links a{color:#20242B}.hero-links span{color:#75808E}.hero .chip.blue{background:#EDF5FC;border-color:#BDD8EE;color:#1C619E}.hero .chip.green{background:#F2F8E9;border-color:#D3E5B9;color:#4C762E}#projects{background:#F1F4F7;border-color:#DFE4EB}.projcard.featured{background:#FFF;border-color:#DFE4EB;color:#20242B}.projcard.featured .no,.projcard.featured .body::after{color:#2777BD}.projcard.featured p{color:#4A5568}.mine.ai{background:#F1F5FB;border-color:#B7CAE7;border-left-color:#355E91}.mine.ai .label,.mine.ai .pill{color:#355E91}.mine.ai .pill{border-color:#B7CAE7}.mine.ai .pill.planned{background:#FAECEF;border-color:#E8C5CE;color:#A4546B}.chip.amber,.education-status{background:#FFF5DF;border-color:#ECD5AA;color:#8B611D}.note{background:#FFF8E9;border-color:#EAD7AD;border-left-color:#D19A3C}.note b{color:#815821}`;}
+  if(t.legacy)css+=`:root{--cyan:#39B9D0;--cyan-ink:#2A93A6;--danger-ink:#DC4D5A;--danger-soft:#FFF0F2;--purple-ink:#6B4FD0;--purple-soft:#F1ECFD}.b-c{background:#E3EEF8;color:#0A4E80}.b-php{background:#EEEEF8;color:#50548C}.b-lar{background:#FDE9E7;color:#C0342A}.b-js{background:#FAF5D9;color:#78680A}.b-api{background:#E2F3F0;color:#056A60}.b-sql{background:#E7EFF5;color:#35617F}.b-pg{background:#E6EDF4;color:#2B5677}.b-docker{background:#E4F1FD;color:#15619E}.b-ros{background:#E9ECF2;color:#33415C}.b-stm{background:#E8EBF0;color:#23385A}.b-proto{background:#EAF4FF;color:#1461AE}.b-git{background:#FDEAE6;color:#BF4028}.b-jira{background:#E5EDFA;color:#0B48A8}.chip.purple,.tag-edu{background:#F1ECFD;color:#6B4FD0;border-color:#DCD0FA}`;
+  if(t.legacy)css+=`:root{--shadow:0 6px 18px rgba(31,49,73,.12),0 2px 5px rgba(31,49,73,.06)}.projcard:hover,.projcard:focus-visible{box-shadow:0 10px 26px rgba(39,119,189,.20),0 3px 8px rgba(31,49,73,.08)}`;
+  return css;
+}
+function cardCss(settings){
+  const {shadow,blur,radius,x,y,border,borderColor,borderAuto,photo,photoMobile}=settings;
+  const alpha=(shadow/100).toFixed(3),secondary=(shadow/200).toFixed(3);
+  const value=shadow===0?'none':`${x}px ${y}px ${blur}px rgba(31,49,73,${alpha}),${Math.round(x/3)}px ${Math.round(y/3)}px ${Math.round(blur/3)}px rgba(31,49,73,${secondary})`;
+  const hover=shadow===0?'none':`${x}px ${y}px ${blur+8}px rgba(31,49,73,${Math.min(.45,shadow*.015).toFixed(3)}),${Math.round(x/3)}px ${Math.round(y/3)}px ${Math.round(blur/2)}px rgba(31,49,73,${secondary})`;
+  const cards='.card,.mine,.theirs,.note,.job,.education-card,.stack,.projcard,.presentation-card,.demo-video-card,figure:not(.presentation-slide),.step,.flow .node,.noderow,.collaboration-diagram,.collaboration-node';
+  return `:root{--shadow:${value};--radius-sm:${Math.round(radius*.58)}px;--radius:${Math.round(radius*.83)}px;--radius-lg:${radius}px}${cards}{border-width:${border}px;${borderAuto?'':`border-color:${borderColor};`}}.mine,.job,.theirs,.note{border-left-width:${border?border+3:0}px}.projcard:hover,.projcard:focus-visible{box-shadow:${hover}}.collaboration-node{border-radius:var(--radius)}.hero.hero-plain .hero-card{grid-template-columns:${photo}px minmax(0,1fr)}.hero.hero-plain .hero-profile-photo{width:${photo}px}@media(max-width:620px){.hero.hero-plain .hero-card{grid-template-columns:minmax(0,1fr)}.hero.hero-plain .hero-profile-photo{width:min(${photoMobile}px, 100%);justify-self:center}}`;
+}
+function syncCardControls(){
+  for(const [id,key,unit] of rangeControls){
+    document.getElementById(id).value=cardSettings[key];
+    document.querySelector(`output[for="${id}"]`).textContent=cardSettings[key]+unit;
+  }
+  document.getElementById('border-color').value=cardSettings.borderColor;
+  document.getElementById('border-auto').checked=cardSettings.borderAuto;
+}
+function updateToolbar(){
+  document.querySelectorAll('[data-palette]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.palette===current)));
+  document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.collection===collection)));
+  document.querySelectorAll('[data-palette]').forEach(b=>{b.hidden=b.dataset.group!=='both'&&b.dataset.group!==collection;});
+  document.querySelectorAll('[data-section]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.section===section)));
+  const t=themes.find(t=>t.id===current);
+  document.querySelector('.opinion').textContent=t?t.opinion:'현재 녹색·베이지·코랄 조합입니다. 저장된 디자인과 비교해 보세요.';
+  document.querySelectorAll('[data-device]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.device===device)));
+  stage.classList.toggle('mobile',device==='mobile');
+  const state={palette:current,section,device,...cardSettings};
+  history.replaceState(null,'','?'+new URLSearchParams(state));
+  try{localStorage.setItem(storageKey,JSON.stringify(state));}catch{}
+}
+function applyTheme(){
+  updateToolbar();if(!ready)return;
+  const doc=frame.contentDocument;
+  const savedTheme=doc.getElementById('portfolio-theme');if(savedTheme)savedTheme.disabled=true;
+  let style=doc.getElementById('local-palette-override');
+  if(!style){style=doc.createElement('style');style.id='local-palette-override';doc.head.append(style);}
+  const t=themes.find(t=>t.id===current);style.textContent=(t&&!t.passThrough?themeCss(t):'')+cardCss(cardSettings);
+}
+function goToSection(){
+  if(!ready)return;
+  if(section==='top'){frame.contentWindow.scrollTo({top:0,behavior:'instant'});return;}
+  const target=frame.contentDocument.getElementById(section);
+  if(target)target.scrollIntoView({behavior:'instant',block:'start'});
+}
+for(const t of themes){
+  const b=document.createElement('button');b.className='palette';b.dataset.palette=t.id;b.dataset.group=t.id==='original'?'both':groupOf(t);b.type='button';
+  const colors=t.colors||[t.primary,t.accent];b.title=colors.join(' · ');
+  b.innerHTML=`<span class="swatch" aria-hidden="true">${colors.map(c=>`<i style="background:${c}"></i>`).join('')}</span><span><strong>${t.name}</strong><small>${t.colors?`${t.colors.length}색 팔레트`:t.primary+' / '+t.accent}${t.recommend?' · '+t.recommend:''}</small></span>`;
+  b.addEventListener('click',()=>{current=t.id;applyTheme();});paletteList.append(b);
+}
+document.querySelectorAll('[data-section]').forEach(b=>b.addEventListener('click',()=>{section=b.dataset.section;updateToolbar();goToSection();}));
+document.querySelectorAll('[data-collection]').forEach(b=>b.addEventListener('click',()=>{collection=b.dataset.collection;current={images:'img3',originals:'original-blue',more:'o',new:'g',existing:'a'}[collection];applyTheme();}));
+document.querySelectorAll('[data-device]').forEach(b=>b.addEventListener('click',()=>{
+  device=b.dataset.device;updateToolbar();
+}));
+for(const [id,key] of rangeControls){
+  document.getElementById(id).addEventListener('input',event=>{cardSettings[key]=Number(event.target.value);syncCardControls();applyTheme();});
+}
+document.getElementById('border-color').addEventListener('input',event=>{cardSettings.borderColor=event.target.value;cardSettings.borderAuto=false;syncCardControls();applyTheme();});
+document.getElementById('border-auto').addEventListener('change',event=>{cardSettings.borderAuto=event.target.checked;applyTheme();});
+document.getElementById('reset-cards').addEventListener('click',()=>{cardSettings={...cardDefaults};syncCardControls();applyTheme();document.querySelector('.settings-status').textContent='카드 설정을 초기화했습니다.';});
+document.querySelector('.fold-palettes').addEventListener('click',event=>{const collapsed=document.querySelector('.toolbar').classList.toggle('collapsed');event.target.setAttribute('aria-expanded',String(!collapsed));event.target.textContent=collapsed?'색 조합 펼치기':'색 조합 접기';});
+document.getElementById('copy-settings').addEventListener('click',async()=>{
+  const status=document.querySelector('.settings-status');
+  try{await navigator.clipboard.writeText(location.href);status.textContent='설정 링크를 복사했습니다.';}catch{status.textContent='주소창의 링크를 복사해 주세요.';}
+});
+document.getElementById('download-theme').addEventListener('click',async()=>{
+  const status=document.querySelector('.settings-status');
+  try{
+    const t=themes.find(t=>t.id===current);
+    let css=t.passThrough?'':themeCss(t);
+    if(t.passThrough){const response=await fetch('styles.css');if(!response.ok)throw Error('Theme unavailable');css=await response.text();}
+    const url=URL.createObjectURL(new Blob([`/* ${t.name} | shadow ${cardSettings.shadow}% | blur ${cardSettings.blur}px | radius ${cardSettings.radius}px */\n`,css,'\n',cardCss(cardSettings)],{type:'text/css;charset=utf-8'}));
+    const link=document.createElement('a');link.href=url;link.download='theme-original.css';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    status.textContent='현재 디자인의 CSS를 내려받았습니다.';
+  }catch{status.textContent='내려받기에 실패했습니다. 잠시 후 다시 시도해 주세요.';}
+});
+frame.addEventListener('load',()=>{ready=true;applyTheme();goToSection();});
+frame.src='index.html#'+(section==='top'?'':section);
+new ResizeObserver(()=>document.documentElement.style.setProperty('--toolbar-height',document.querySelector('.toolbar').getBoundingClientRect().height+'px')).observe(document.querySelector('.toolbar'));
+syncCardControls();
+updateToolbar();
+</script>
+</body>
+</html>
