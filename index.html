@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261019-10">
+<link rel="stylesheet" href="styles.css?v=20261020-4">
 <link rel="stylesheet" id="portfolio-theme" href="theme-original.css?v=20261019-2">
 <script src="presentation.js?v=20261015-2" defer></script>
 </head>
@@ -204,7 +204,6 @@
   <div class="wrap">
     <div class="sec-head">
       <h2>프로젝트</h2>
-      <p>직접 맡은 화면 · 제어 · AI 경로 판단 작업</p>
     </div>
     <div class="projgrid">
       <a class="projcard featured" href="#fms">
@@ -212,7 +211,7 @@
         <div class="body">
           <p class="no">01 · 팀 E1I6 · 진행 중</p>
           <h3>AX MULTI-ROBOT LOGISTICS</h3>
-          <p>담당 파트 FMS AI · UI 설계 · React 구현 · LLM 경로 판단</p>
+          <p>UI 설계, 프론트엔드 구현(React), AI 경로 판단/모니터링</p>
         </div>
       </a>
       <a class="projcard" href="#kickcan">
@@ -264,7 +263,6 @@
         <span class="chip blue">LLM 경로 생성</span>
       </div>
       <h2>AX MULTI-ROBOT LOGISTICS</h2>
-      <p class="sub">LLM 경로 생성과 다중 로봇 관제를 다루는 TurtleBot 기반 물류 시스템입니다.</p>
 
       <div class="fms-role-grid">
         <div class="mine">
@@ -283,17 +281,22 @@
             <p class="label">개인 담당 02 · AI·LLM</p>
             <span class="chip amber">진행 중</span>
           </div>
-          <p class="big">AI 모델 선정 · 최단 경로 생성 및 주행</p>
-          <p>AI 모델 테스트·비교 후 최단 경로를 생성해 주행하도록 구현했습니다.<br class="desktop-sentence-break"> 이후 최적 경로를 반영할 수 있도록 확장할 예정입니다.</p>
+          <p class="big">최단 경로 생성·주행 · AI 충돌 예측</p>
+          <p>AI 모델 테스트·비교 후 최단 경로를 생성해 주행하도록 구현했습니다.<br class="desktop-sentence-break"> 현재 AI 기반 충돌 모니터링·예측 기능을 구현 중이며, 이후 최적 경로 판단에 반영할 예정입니다.</p>
           <div class="pills">
             <span class="pill">AI 모델 선정 · 비교</span>
             <span class="pill">Iterative · 84쌍 경로 검증</span>
             <span class="pill">최단 경로 주행</span>
+            <span class="pill planned">AI 충돌 모니터링·예측 구현 중</span>
             <span class="pill planned">최적 경로 반영 예정</span>
           </div>
         </div>
         <div class="theirs">ROS 2 / MQTT 로봇 연동 · A* 탐색 알고리즘 및 예외 처리는 팀원 담당</div>
       </div>
+      <aside class="fms-purpose" aria-label="최적 경로가 필요한 이유">
+        <strong>최적 경로가 필요한 이유</strong>
+        <p>여러 로봇이 통로를 함께 사용하므로 이동 거리뿐 아니라 <b>충돌 위험과 대기 시간, 하드웨어·주행 환경</b>을 고려해 안전하고 효율적인 경로를 선택하는 것이 목표입니다.</p>
+      </aside>
 
       <div class="fms-media-grid">
         <figure>
@@ -316,13 +319,19 @@
           <div class="fms-presentation-summary">
             <span class="fms-presentation-label">개인 담당 · FMS AI</span>
             <h3>LLM 경로 판단</h3>
-            <p class="fms-presentation-lead">AI 모델 비교와 경로 판단 방식 선정</p>
+            <p class="fms-presentation-lead">비교 기준 수립 → 조건별 실험 → 모델·방식 선정</p>
             <ul class="fms-presentation-points">
-              <li><strong>비교 기준</strong>다익스트라와 A*를 비교하고 A*를 평가 기준으로 선정</li>
-              <li><strong>정확도 개선</strong>인접 노드를 하나씩 고르는 Iterative 방식과 코드 검증 적용</li>
-              <li><strong>구현 결과</strong>AI 모델로 최단 경로를 생성해 시뮬레이션 주행에 반영</li>
+              <li><strong>논문 검토 · 비교 기준 선정</strong>논문의 Dijkstra·A* 비교 결과를 검토했습니다. 같은 최단 경로를 더 적은 노드 탐색으로 찾는 A*가 단일 목적지와 좌표 정보가 있는 프로젝트에 적합하다고 판단해, LLM 경로 평가 기준으로 선정했습니다.</li>
+              <li><strong>조건별 실험</strong>PC·Jetson 실행 환경, Direct·CoT·Iterative 생성 방식, 전체 그래프·인접 노드 입력을 비교했습니다. 최종적으로 7개 모델을 2개 입력 조건에서 84쌍 × 5회, 총 5,880회 평가했습니다.</li>
+              <li><strong>선택 정확도 개선</strong>인접 노드를 하나씩 선택하는 Iterative 방식이 6조건 비교에서 30회 중 28회 도착했습니다. 이 방식에 연결 검증·재방문 제한을 적용해 없는 간선과 반복 경로를 줄였습니다.</li>
+              <li><strong>모델 선택 조건과 우선순위</strong>도착률·최단 경로 일치율·응답 시간을 비교하고, 도착 안정성을 우선해 Kev 0.8B + 인접 정보를 채택했습니다. 최단 경로 비율이 높은 Kev 4B + 전체 그래프는 대안으로 비교했습니다.</li>
             </ul>
-            <p class="fms-presentation-scope"><strong>시험 범위</strong>출발 13개 노드 × 도킹 목적지 7개 노드 − 동일 노드 7쌍 = 84쌍</p>
+            <div class="fms-presentation-scope">
+              <strong>최종 실험 결과 · A* 기준</strong>
+              <p><b>Kev 0.8B + 인접</b> · 도착 100% · 최단 52.4% · 0.41초</p>
+              <p><b>Kev 4B + 전체</b> · 도착 95.2% · 최단 75.0% · 0.61초</p>
+              <p>응답 시간은 경로 생성 중앙값입니다. 선택한 모델·방식은 경로 생성과 시뮬레이션 주행에 연결했습니다.</p>
+            </div>
           </div>
           <div class="fms-presentation-media">
             <div class="presentation-header">
@@ -362,9 +371,15 @@
         </div>
         <div class="fms-presentation-detail">
           <p><strong>디버깅</strong> 없는 간선 생성과 반복 경로를 인접 노드 선택·코드 검증, 재방문 제한으로 개선했습니다.</p>
-          <p><strong>다음 단계</strong> 주문 기반 다중 로봇 주행과 교착 예측, 하드웨어·주행 환경을 고려한 최적 경로를 반영할 예정입니다.</p>
         </div>
       </div>
+      <section class="card kv fms-ongoing" aria-labelledby="fms-ongoing-title">
+        <div class="mine-heading">
+          <h3 id="fms-ongoing-title">AI 기반 충돌 모니터링·예측</h3>
+          <span class="chip amber">진행 중</span>
+        </div>
+        <p>AI 기반 충돌 모니터링·예측을 구현 중입니다.<br class="desktop-sentence-break"> 이후 예측 결과와 하드웨어·주행 환경을 고려한 최적 경로로 확장할 예정입니다.</p>
+      </section>
       <a class="repo" href="https://github.com/E1I6-Logistics/Logistics_FMS">github.com/E1I6-Logistics/Logistics_FMS</a>
     </article>
 
