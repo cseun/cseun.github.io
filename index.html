@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261020-4">
+<link rel="stylesheet" href="styles.css?v=20261021-3">
 <link rel="stylesheet" id="portfolio-theme" href="theme-original.css?v=20261019-2">
-<script src="presentation.js?v=20261015-2" defer></script>
+<script src="presentation.js?v=20261021-3" defer></script>
 </head>
 <body>
 
@@ -47,6 +47,7 @@
           <a href="mailto:cseeun98@gmail.com"><span>이메일</span><strong>cseeun98@gmail.com</strong></a>
           <a href="https://github.com/cseun"><span>GitHub</span><strong>github.com/cseun</strong></a>
           <a href="https://slowbreeze.tistory.com"><span>블로그</span><strong>slowbreeze.tistory.com</strong></a>
+          <a class="pdf-download" href="assets/choi-seeun-portfolio.pdf" download="최세은_로봇시스템개발자_포트폴리오.pdf" type="application/pdf"><strong>포트폴리오 PDF 다운로드 ↓</strong></a>
         </div>
       </div>
     </div>
@@ -293,9 +294,10 @@
         </div>
         <div class="theirs">ROS 2 / MQTT 로봇 연동 · A* 탐색 알고리즘 및 예외 처리는 팀원 담당</div>
       </div>
-      <aside class="fms-purpose" aria-label="최적 경로가 필요한 이유">
-        <strong>최적 경로가 필요한 이유</strong>
-        <p>여러 로봇이 통로를 함께 사용하므로 이동 거리뿐 아니라 <b>충돌 위험과 대기 시간, 하드웨어·주행 환경</b>을 고려해 안전하고 효율적인 경로를 선택하는 것이 목표입니다.</p>
+      <aside class="fms-purpose" aria-label="최적 경로 목표와 최단 거리 실험의 이유">
+        <div><strong>최적 경로가 필요한 이유</strong><p>팀의 목표는 이동 거리뿐 아니라 충돌 위험·대기 시간·하드웨어와 주행 환경까지 고려한 최적 경로를 AI가 생성하도록 하는 것입니다.</p></div>
+        <div><strong>최단 거리부터 검증한 이유</strong><p>당시 환경에서는 다양한 예외 상황을 만들고 검증하기 어려웠습니다. 목표를 단계로 나눠, 먼저 예외 상황을 제외한 정적 환경에서 AI가 최단 거리 경로를 선택할 수 있는지 실험했습니다.</p></div>
+        <div><strong>실험을 통해 확인하려는 것</strong><p>AI 중심의 경로 판단을 구현해 보려는 실험에서 출발했습니다. 기존 경로 판단 과정 중 어떤 부분을 AI로 대체할 수 있는지, 어떤 부분에 코드 검증이 필요한지 확인하고자 했습니다.</p></div>
       </aside>
 
       <div class="fms-media-grid">
@@ -326,12 +328,7 @@
               <li><strong>선택 정확도 개선</strong>인접 노드를 하나씩 선택하는 Iterative 방식이 6조건 비교에서 30회 중 28회 도착했습니다. 이 방식에 연결 검증·재방문 제한을 적용해 없는 간선과 반복 경로를 줄였습니다.</li>
               <li><strong>모델 선택 조건과 우선순위</strong>도착률·최단 경로 일치율·응답 시간을 비교하고, 도착 안정성을 우선해 Kev 0.8B + 인접 정보를 채택했습니다. 최단 경로 비율이 높은 Kev 4B + 전체 그래프는 대안으로 비교했습니다.</li>
             </ul>
-            <div class="fms-presentation-scope">
-              <strong>최종 실험 결과 · A* 기준</strong>
-              <p><b>Kev 0.8B + 인접</b> · 도착 100% · 최단 52.4% · 0.41초</p>
-              <p><b>Kev 4B + 전체</b> · 도착 95.2% · 최단 75.0% · 0.61초</p>
-              <p>응답 시간은 경로 생성 중앙값입니다. 선택한 모델·방식은 경로 생성과 시뮬레이션 주행에 연결했습니다.</p>
-            </div>
+
           </div>
           <div class="fms-presentation-media">
             <div class="presentation-header">
@@ -347,12 +344,12 @@
             </div>
             <div class="presentation-viewport" id="fms-slides" aria-label="LLM 경로 판단 발표자료 11장" tabindex="0">
               <div class="presentation-track">
-            <figure class="presentation-slide"><img src="assets/fms-presentation-01.png" alt="1장. LLM 경로 판단 최종 목표와 3단계 설계" width="1280" height="720"><figcaption>01 · 최종 목표와 3단계 설계</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-01.png?v=20261021-3" alt="1장. LLM 경로 판단 최종 목표와 3단계 설계" width="1280" height="720"><figcaption>01 · 최종 목표와 3단계 설계</figcaption></figure>
             <figure class="presentation-slide"><img src="assets/fms-presentation-02.png" alt="2장. LLM 경로 판단 1단계 진행 과정" loading="lazy" width="1280" height="720"><figcaption>02 · 1단계 진행 과정</figcaption></figure>
-            <figure class="presentation-slide"><img src="assets/fms-presentation-03.png" alt="3장. V1과 V2 경로 판단 기법 비교" loading="lazy" width="1280" height="720"><figcaption>03 · V1·V2 기법 비교</figcaption></figure>
-            <figure class="presentation-slide"><img src="assets/fms-presentation-04.png" alt="4장. V2 최종 84쌍 시험 순위와 결론" loading="lazy" width="1280" height="720"><figcaption>04 · 84쌍 시험 결과</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-03.png?v=20261021-3" alt="3장. V1과 V2 경로 판단 기법 비교" loading="lazy" width="1280" height="720"><figcaption>03 · V1·V2 기법 비교</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-04.png?v=20261021-3" alt="4장. V2 최종 84쌍 시험 순위와 결론" loading="lazy" width="1280" height="720"><figcaption>04 · 84쌍 시험 결과</figcaption></figure>
             <figure class="presentation-slide"><img src="assets/fms-presentation-05.png" alt="5장. LLM 경로 판단 디버깅 과정" loading="lazy" width="1280" height="720"><figcaption>05 · 디버깅 과정</figcaption></figure>
-            <figure class="presentation-slide"><img src="assets/fms-presentation-06.png" alt="6장. A* 알고리즘 채택 사유" loading="lazy" width="1280" height="720"><figcaption>06 · A* 알고리즘 채택 사유</figcaption></figure>
+            <figure class="presentation-slide"><img src="assets/fms-presentation-06.png?v=20261021-3" alt="6장. A* 알고리즘 채택 사유" loading="lazy" width="1280" height="720"><figcaption>06 · A* 알고리즘 채택 사유</figcaption></figure>
             <figure class="presentation-slide">
               <video controls preload="metadata" poster="assets/fms-presentation-09.png" aria-label="9장. LLM 경로 생성 및 시뮬레이션 주행 시연 영상">
                 <source src="assets/fms-llm-route-demo.mp4" type="video/mp4">
@@ -367,11 +364,15 @@
               </div>
             </div>
             <p class="presentation-hint">버튼 또는 좌우 스와이프로 넘길 수 있습니다.</p>
+
           </div>
         </div>
-        <div class="fms-presentation-detail">
-          <p><strong>디버깅</strong> 없는 간선 생성과 반복 경로를 인접 노드 선택·코드 검증, 재방문 제한으로 개선했습니다.</p>
-        </div>
+            <section class="fms-presentation-scope fms-final-results" aria-label="최종 실험 결과 A* 기준">
+              <strong>최종 실험 결과 · A* 기준</strong>
+              <p><b>채택 · Kev 0.8B + 전체 그래프·인접 정보</b><br>도착 420/420 (100%) · 최단 비용 일치 52.4%<br>경로 생성 시간 중앙값 0.409초</p>
+              <p><b>비교 대안 · Kev 4B + 전체 그래프</b><br>도착 400/420 (95.2%) · 최단 비용 일치 75.0%<br>경로 생성 시간 중앙값 0.613초</p>
+              <p>모델 7종 × 입력 2종 × 84쌍 × 5회 = 5,880회 평가. 도착 안정성을 우선해 선정한 모델을 시뮬레이션 주행에 연결했습니다.</p>
+            </section>
       </div>
       <section class="card kv fms-ongoing" aria-labelledby="fms-ongoing-title">
         <div class="mine-heading">

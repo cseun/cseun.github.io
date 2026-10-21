@@ -58,8 +58,29 @@ GitHub Pages로 서비스되는 정적 사이트입니다. 빌드 도구나 프�
 index.html      단일 페이지 본문
 styles.css      스타일
 presentation.js 발표자료 넘김
+style-lab.html  디자인 설정 및 미리보기
+theme-original.css 적용된 컬러와 카드 설정
 .nojekyll       Jekyll 처리 건너뛰기
 assets/         이미지와 시연 영상
+```
+
+### PDF 다운로드
+
+상단 프로필의 PDF 다운로드 버튼은 `assets/choi-seeun-portfolio.pdf`를 제공합니다.
+현재 포트폴리오 PDF는 `scripts/reference_portfolio.py`로 생성합니다(5페이지).
+경력기술서는 `scripts/create_application_pdfs.py`의 `career()` 함수로 생성합니다.
+이력서는 `scripts/create_resume.py`로 생성합니다(1페이지).
+제출용 요약 문구를 각 스크립트에서 관리하며,
+`output/pdf/`에 결과를 저장하고 `assets/`의 포트폴리오 다운로드 파일을 함께 갱신합니다.
+웹 본문과 제출용 요약 문구는 따로 관리하므로 내용 수정 시 양쪽을 함께 확인합니다.
+기존 `scripts/export_portfolio_pdf.py`는 웹 본문 기반의 상세판 생성용입니다.
+
+필요한 Python 패키지는 `reportlab`, `lxml`, `Pillow`, `pypdf`입니다.
+Windows의 맑은 고딕 글꼴을 사용하며, 영상과 전체 발표자료는 클릭 가능한 링크로 연결합니다.
+
+```powershell
+python scripts/reference_portfolio.py
+python scripts/create_resume.py
 ```
 
 수정 후 `git push`하면 1~2분 내에 반영됩니다. 이미지를 교체할 때는 `assets/` 안의 파일을 같은 이름으로 덮어쓰면 되고, 가로형은 폭 1200~1400px, 세로형은 700~1000px 정도로 줄여서 올리는 편이 좋습니다.
