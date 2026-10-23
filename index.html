@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261023-1">
+<link rel="stylesheet" href="styles.css?v=20261023-2">
 <link rel="stylesheet" id="portfolio-theme" href="theme-original.css?v=20261019-2">
 <script src="community-config.js" defer></script>
-<script src="community.js" defer></script>
+<script src="community.js?v=20261023-2" defer></script>
 <script src="presentation.js?v=20261021-3" defer></script>
 </head>
 <body>
@@ -334,7 +334,6 @@
               <ul><li>노드별 총 방문 횟수는 최대 2회로 제한합니다.</li><li>같은 방향성 엣지는 한 번만 사용합니다.</li><li>다음 후보를 고를 때 직전 노드를 우선 제외합니다.</li><li>후보가 없을 때만 미사용 역방향 엣지를 통한 backtrace를 허용합니다. 이때도 노드 방문 제한을 적용합니다.</li></ul>
               <p>반복 탐색 중 경로 생성에 실패할 수 있으며, 이 규칙만으로 도착이나 최단 경로를 보장하지 않습니다.</p>
             </details>
-            <a href="#llm-feedback">LLM 실험에 피드백 남기기 ↓</a>
           </div>
           <div class="fms-presentation-media">
             <div class="presentation-header">
@@ -695,14 +694,6 @@
   </div>
 </section>
 
-<section id="llm-feedback" class="feedback-section"><div class="wrap">
-  <div class="sec-head"><h2>LLM 실험에 의견을 남겨주세요</h2><p>함께 더 나은 경로를 찾아갑니다</p></div>
-  <div class="card"><p>경로 탐색 규칙, 모델 비교, 실험 방식에 대한 피드백을 환영합니다. 남겨주신 의견은 직접 확인하고, 개선에 반영하겠습니다.</p>
-  <form id="feedback-form"><label for="feedback-name">이름 또는 닉네임</label><input id="feedback-name" name="name" maxlength="40" placeholder="익명도 괜찮습니다" autocomplete="nickname">
-  <label for="feedback-message">피드백 <span aria-hidden="true">*</span></label><textarea id="feedback-message" name="message" required minlength="5" maxlength="2000" rows="5" placeholder="LLM 경로 판단에 대한 의견이나 개선 아이디어를 적어주세요."></textarea>
-  <p class="feedback-note">댓글은 공개됩니다. 연락처 등 개인정보는 남기지 말아주세요.</p><button type="submit">피드백 남기기</button></form>
-  <p id="feedback-status" role="status"></p><div id="feedback-list" aria-label="공개 피드백"></div><button id="feedback-more" type="button" hidden>이전 댓글 더 보기</button></div>
-</div></section>
 <dialog id="admin-dialog" class="community-dialog"><button type="button" id="admin-close" aria-label="관리자 창 닫기">닫기 ×</button><h2>관리자 방문 통계</h2>
 <form id="admin-login"><label for="admin-password">관리자 비밀번호</label><input id="admin-password" type="password" required autocomplete="current-password"><button type="submit">통계 확인</button></form>
 <p id="admin-status" role="status"></p><div id="admin-stats" hidden></div><button id="admin-logout" type="button" hidden>로그아웃</button></dialog>
