@@ -903,3 +903,25 @@ footer.site p { font-size: 13.5px; color: var(--text-dim); }
 .fms-final-results > strong, .fms-final-results > p:last-child { grid-column: 1 / -1; }
 .fms-presentation-card > .fms-final-results p { margin: 0; }
 @media(max-width:600px) { .fms-presentation-card > .fms-final-results { grid-template-columns: minmax(0,1fr); padding: 16px; } }
+
+/* Feedback and private analytics */
+.feedback-section { padding: 56px 0; }
+#feedback-form { display: grid; gap: 10px; margin-top: 24px; }
+#feedback-form input, #feedback-form textarea, #admin-password { width: 100%; font: inherit; color: var(--text); padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+#feedback-form textarea { resize: vertical; }
+.feedback-section button, .community-dialog button { font: inherit; cursor: pointer; padding: 10px 16px; border: 1px solid var(--primary-line); border-radius: 8px; background: var(--primary); color: white; }
+#feedback-form button { justify-self: start; }
+.feedback-note { color: var(--text-dim); font-size: 13px; }
+.feedback-entry { padding: 20px 0; border-top: 1px solid var(--line); }
+.feedback-entry p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.feedback-entry time { margin-left: 12px; font-size: 12px; color: var(--text-dim); }
+.community-dialog { width: min(620px, calc(100% - 32px)); max-height: 85vh; overflow: auto; padding: 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--text); }
+.community-dialog::backdrop { background: #100c0d88; }
+#admin-login { display: grid; gap: 12px; }
+#admin-close { float: right; }
+.admin-link { background: none; border: 0; padding: 4px; color: inherit; font: inherit; cursor: pointer; text-decoration: underline; }
+#admin-stats table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+#admin-stats td, #admin-stats th { padding: 8px; text-align: left; border-bottom: 1px solid var(--line); }
+.route-rules { margin: 16px 0; font-size: 14px; }
+.route-rules summary { cursor: pointer; font-weight: 600; }
+[hidden] { display: none !important; }

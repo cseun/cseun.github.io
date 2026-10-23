@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-community",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-23",
+  "triggers": { "crons": ["0 18 * * *"] },
+  "vars": { "ALLOWED_ORIGIN": "https://cseun.github.io" },
+  "d1_databases": [{ "binding": "DB", "database_name": "portfolio-community", "database_id": "6c972b4c-3e07-4cc1-8a25-f2e07e56b610" }]
+}
